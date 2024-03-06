@@ -1,3 +1,8 @@
+import { Outlet } from "react-router-dom";
 export default function Areas() {
-  return <div>home</div>;
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
 }
