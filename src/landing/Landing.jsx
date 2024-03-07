@@ -3,10 +3,10 @@ export default function Landing() {
   return (
     <>
       <div>
-        <section className="w-screen flex justify-center">
+        <section className=" flex justify-center">
           <img src={banner} className="" />
         </section>
-        <section className="p-20 w-screen flex flex-col">
+        <section className="p-20 flex flex-col">
           <p className="text-center text-darkBlue font-title tracking-wide text-lg">
             <span className="font-bold">Malm Green & Lerner</span> surge como un
             referente en el ámbito legal, combinando <br />
