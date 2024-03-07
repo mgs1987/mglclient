@@ -5,7 +5,7 @@ import Team from "../team/Team";
 
 export default function Areas() {
   return (
-    <div className="max-w-full">
+    <div className="w-screen">
       <Outlet />
       <Landing />
       <Trajectory />

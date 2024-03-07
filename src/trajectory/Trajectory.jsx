@@ -1,5 +1,3 @@
-import React from "react";
-
 const Trajectory = () => {
   return (
     <div className=" m-auto px-20 py-10 max-w-screen-xl flex-row justify-center bg-darkBlue text-white">
