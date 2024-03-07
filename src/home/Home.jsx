@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Landing from "../landing/Landing";
 import Trajectory from "../trajectory/Trajectory";
 import Team from "../team/Team";
+import Contactus from "../contactus/Contactus";
 
 export default function Areas() {
   return (
@@ -10,6 +11,7 @@ export default function Areas() {
       <Landing />
       <Trajectory />
       <Team />
+      <Contactus />
     </div>
   );
 }

@@ -1,1 +1,7 @@
-export default function Footer() {}
+export default function Footer() {
+  return (
+    <>
+      <div className="bg-darkBlue"></div>
+    </>
+  );
+}
