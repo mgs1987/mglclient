@@ -1,19 +1,30 @@
-import React from "react";
 import linked from "../img/linkedin.png";
 import insta from "../img/instagram.png";
-const CardPerson = ({ img, name }) => {
+import { Link } from "react-router-dom";
+const CardPerson = ({ img, name, description }) => {
   return (
-    <div className="flex justify-center flex-col">
-      <img
-        className="m-auto h-96 flex justify-center"
-        src={img}
-        alt="persona"
-      />
-      <h2 className="flex justify-center">{name}</h2>
-      <span className=" text-lg flex justify-center">Socio</span>
-      <div className="flex justify-center">
-        <img className="size-8 m-2" src={linked} alt="linkedIn" />
-        <img className="size-8 m-2" src={insta} alt="instagram" />
+    <div className="pb-10 group h-96 w-80 [perspective:1000px]">
+      <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        <div className="absolute inset-0 shadow-xl shadow-slate-500/40 bg-base">
+          <img className="h-full w-full object-cover " src={img} alt="foto" />
+          <h3 className="flex justify-center">{name}</h3>
+          <span className=" text-lg flex justify-center">Socio</span>
+        </div>
+        <div className="absolute inset-0 h-full w-full bg-darkBlue/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <div className="flex min-h-full flex-col justify-center bg-base">
+            <div className=" p-9 static flex flex-col justify-center ">
+              <p className="text-black">{description}</p>
+              <div>
+                <Link>
+                  <img className="size-8 m-2" src={linked} alt="linkedIn" />
+                </Link>
+                <Link>
+                  <img className="size-8 m-2" src={insta} alt="instagram" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
