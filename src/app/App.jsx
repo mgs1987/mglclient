@@ -1,15 +1,24 @@
+import { Suspense } from "react";
 import "./App.css";
 import Home from "../home/Home";
+import Areas from "../areas/Areas";
+import Team from "../team/Team";
 import Wrapper from "../wrapper/Wrapper";
 import { Routes, Route } from "react-router-dom";
+import Contactus from "../contactus/Contactus";
 function App() {
   return (
     <>
-      <Routes>
-        <Route exact path="/" element={<Wrapper />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
+      <Suspense fallback="loading">
+        <Routes>
+          <Route exact path="/" element={<Wrapper />}>
+            <Route index element={<Home />} />
+            <Route exact path="/team" element={<Team />} />
+            <Route exact path="/contactus" element={<Contactus />} />
+            <Route exact path="/areas" element={<Areas />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 }

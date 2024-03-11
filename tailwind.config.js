@@ -3,7 +3,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screen: {},
+    screen: {
+      xs: { max: "430px" },
+    },
     extend: {
       fontFamily: {
         title: "DM Sans, sans",
