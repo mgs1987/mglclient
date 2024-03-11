@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         darkBlue: "#0B1F39",
+        base: "#F1F1F5",
       },
     },
   },
