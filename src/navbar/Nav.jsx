@@ -14,12 +14,12 @@ export default function Nav() {
 
   return (
     <>
-      <div className="text-title lg:flex lg:items-center lg:justify-end  lg:gap-4">
+      <div className="font-title lg:flex lg:items-center lg:justify-end  lg:gap-4">
         <NavLink to="/" className="no-underline mx-3 ">
-          <h2 className="text-sm text-darkBlue">{t("nav1")}</h2>
+          <h2 className="text-sm font-title text-darkBlue">{t("nav1")}</h2>
         </NavLink>
         <NavLink to="/team" className="no-underline mx-3 ">
-          <h2 className="text-sm text-darkBlue">{t("nav2")}</h2>
+          <h2 className="text-sm text-darkBlue ">{t("nav2")}</h2>
         </NavLink>
         <NavLink to="/areas" className="no-underline mx-3 ">
           <h2 className="text-sm text-darkBlue">{t("nav3")}</h2>
@@ -32,7 +32,7 @@ export default function Nav() {
           {LANGUAGES.map(({ code, label }) => {
             return (
               <option
-                className="text-title text-darkBlue"
+                className="text-title text-darkBlue font-title"
                 key={code}
                 value={code}
               >

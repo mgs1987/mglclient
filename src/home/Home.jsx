@@ -3,15 +3,16 @@ import Landing from "../landing/Landing";
 import Trajectory from "../trajectory/Trajectory";
 import Team from "../team/Team";
 import Contactus from "../contactus/Contactus";
-import TestCard from "../testCard/TestCard";
+import Areas from "../areas/Areas";
 
-export default function Areas() {
+export default function Home() {
   return (
     <div className="w-screen">
       <Outlet />
       <Landing />
       <Trajectory />
       <Team />
+      <Areas />
       <Contactus />
     </div>
   );

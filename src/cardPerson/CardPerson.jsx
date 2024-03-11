@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import linked from "../img/linkedin.png";
 import insta from "../img/instagram.png";
@@ -7,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const CardPerson = ({ img, name, description }) => {
   const { t } = useTranslation();
   return (
-    <div className="pb-10 group h-96 w-80 [perspective:1000px]">
+    <div className="pb-10 group h-96 w-80 [perspective:1000px] font-title">
       <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         <div className="absolute inset-0 shadow-xl shadow-slate-500/40 bg-base">
           <img className="h-full w-full object-cover " src={img} alt="foto" />
