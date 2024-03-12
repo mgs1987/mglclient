@@ -1,8 +1,10 @@
 import { useState } from "react";
 import logo from "../img/mainlogo.png";
+//import enLogo from "../img/lawyers.png";
 import { Link } from "react-router-dom";
 import burguer from "../img/burguer.svg";
 import Nav from "./Nav";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
