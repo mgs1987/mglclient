@@ -6,6 +6,7 @@ import Team from "../team/Team";
 import Wrapper from "../wrapper/Wrapper";
 import { Routes, Route } from "react-router-dom";
 import Contactus from "../contactus/Contactus";
+import Form from "../Form/Form";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/contactus" element={<Contactus />} />
             <Route exact path="/areas" element={<Areas />} />
+            <Route exact path="/home/form" element={<Form />} />
           </Route>
         </Routes>
       </Suspense>
