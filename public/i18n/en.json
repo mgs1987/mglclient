@@ -16,5 +16,10 @@
     "partner1":"Partner",
     "partner2":"Of Counsel",
     "sendButton":"Send",
-    "contactus":"Contact us"
+    "contactus":"Contact us",
+    "completename":" First name & last name",
+    "phone":" Phone number",
+    "email":" Email",
+    "message":" Message"
+
     }

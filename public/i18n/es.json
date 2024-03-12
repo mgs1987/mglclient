@@ -16,5 +16,9 @@
      "partner1":"Socio",
      "partner2":"Of Counsel",
      "sendButton":"Enviar",
-     "contactus":"Contactate con nosotros"
+     "contactus":"Contactate con nosotros",
+     "completename":" Nombre y apellido",
+      "phone":" Telefono",
+    "email":" Correo electronico",
+    "message":" Mensaje"
     }

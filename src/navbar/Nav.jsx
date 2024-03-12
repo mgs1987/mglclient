@@ -1,15 +1,15 @@
+//import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { LANGUAGES } from "../constants/index";
 import { useTranslation } from "react-i18next";
 
 export default function Nav() {
   const { i18n, t } = useTranslation();
-  const [lang, setLang] = useState();
+  //const [idioma, setIdioma] = useState();
   const onChangeLang = (e) => {
     const lang_code = e.target.value;
+    //setIdioma(e.target.value);
     i18n.changeLanguage(lang_code);
-    setLang(e.target.value);
   };
 
   return (
