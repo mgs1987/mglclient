@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-
+// eslint-disable-next-line no-undef
+const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screen: {
-      xs: { max: "430px" },
-    },
     extend: {
       fontFamily: {
         title: "DM Sans, sans",
@@ -14,6 +12,11 @@ export default {
         darkBlue: "#0B1F39",
         base: "#F1F1F5",
       },
+    },
+    screens: {
+      xs: { min: "390px", max: "429px" },
+      s: { min: "430px", max: "639px" },
+      ...defaultTheme.screens,
     },
   },
   plugins: [],
