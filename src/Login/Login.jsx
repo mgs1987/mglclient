@@ -56,7 +56,7 @@ const Login = () => {
 
     if (input.email === EMAIL && input.password === PASSWORD) {
       setAccess(true);
-      navigate("/login/form");
+      navigate("/login/dashboard");
     }
 
     if (!Object.keys(error).length) {
