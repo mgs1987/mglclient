@@ -72,10 +72,6 @@ const Login = () => {
     }
   };
 
-  /*  useEffect(() => {
-    !access && navigate("/");
-  }, [access, navigate]); */
-
   return (
     <div className="flex justify-center">
       <form
