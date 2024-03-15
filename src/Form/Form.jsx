@@ -101,11 +101,13 @@ const Form = ({ client, setClient, data }) => {
   };
 
   return (
-    <div className="md:w-1/2 lg:w-2/5 mx-5">
-      <h2 className="font-black text-2xl">Manejo de socios</h2>
-      <p className="text-l mt-5 text-center mb-2">
-        Añade tu socio y{" "}
-        <span className="text-darkBlue font-bold">Administralos</span>
+    <div className="md:w-1/3 lg:w-1/3 mx-5">
+      <h2 className=" font-title font-black text-2xl">Manejo de socios</h2>
+      <p className="text-l mt-5 text-center mb-2 font-title">
+        Añade a tus socios y{" "}
+        <span className="text-darkBlue font-title font-bold">
+          Administralos
+        </span>
       </p>
       <form
         onSubmit={handleSubmit}
@@ -114,7 +116,7 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-2">
           <label
             htmlFor="cliente"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Nombre
           </label>
@@ -125,7 +127,7 @@ const Form = ({ client, setClient, data }) => {
             value={input.name}
             onChange={handleChangeInput}
             placeholder="Nombre completo"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12 p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.name && (
@@ -136,7 +138,7 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-4">
           <label
             htmlFor="bike"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Rol
           </label>
@@ -147,7 +149,7 @@ const Form = ({ client, setClient, data }) => {
             value={input.type_bike}
             onChange={handleChangeInput}
             placeholder="Figura dentro de la firma"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12 p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.type_bike && (
@@ -158,7 +160,7 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-4">
           <label
             htmlFor="service"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Especialidad
           </label>
@@ -169,7 +171,7 @@ const Form = ({ client, setClient, data }) => {
             value={input.upkeep}
             onChange={handleChangeInput}
             placeholder="área de profundidad"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.upkeep && (
@@ -180,18 +182,18 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-4">
           <label
             htmlFor="number"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             correo electrónico
           </label>
           <input
-            id="number"
-            type="number"
-            name="phone_number"
-            value={input.phone_number}
+            id="email"
+            type="email"
+            name="email"
+            value={input.email}
             onChange={handleChangeInput}
             placeholder="dirección de correo"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.phone_number && (
@@ -202,7 +204,7 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-4">
           <label
             htmlFor="date"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             LinkedIn
           </label>
@@ -213,7 +215,7 @@ const Form = ({ client, setClient, data }) => {
             value={input.date}
             onChange={handleChangeInput}
             placeholder="url"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.date && (
@@ -224,7 +226,7 @@ const Form = ({ client, setClient, data }) => {
         <div className="mb-4">
           <label
             htmlFor="area"
-            className="block text-gray-700 uppercase font-bold text-left"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             DESCRIPCIÓN
           </label>
@@ -235,7 +237,7 @@ const Form = ({ client, setClient, data }) => {
             value={input.observations}
             onChange={handleChangeInput}
             placeholder="Perfil del socio/ trayectoria/ experiencia"
-            className="border-2 w-11/12  p-2 mt-2 placeholder-gray-400 rounded-sm"
+            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           {/* <>
             {error.observations && (
