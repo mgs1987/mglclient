@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Contactus from "../contactus/Contactus";
 import Form from "../Form/Form";
 import "../i18n";
+import Login from "../Login/Login";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route exact path="/team" element={<Team />} />
           <Route exact path="/contactus" element={<Contactus />} />
           <Route exact path="/areas" element={<Areas />} />
-          <Route exact path="/home/form" element={<Form />} />
+          <Route exact path="/home/login" element={<Login />} />
+          <Route exact path="/login/form" element={<Form />} />
         </Route>
       </Routes>
     </>
