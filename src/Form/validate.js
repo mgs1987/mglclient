@@ -1,4 +1,3 @@
-import React from "react";
 const regexOnlyLetters = /^[a-zA-Z\s]+$/;
 const regexSpaces = /^\s*$/;
 const regexOnlyNumbers = /^[0-9]+$/;

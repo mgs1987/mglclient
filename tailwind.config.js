@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         title: "DM Sans, sans",
       },
+      fontSize: { medium: "1.6rem", less: "1.3rem" },
       colors: {
         darkBlue: "#0B1F39",
         base: "#F1F1F5",

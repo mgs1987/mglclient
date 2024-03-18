@@ -9,13 +9,14 @@ export default function Landing() {
         <section className="flex justify-center">
           <img src={banner} className="w-[100vw] h-auto" />
         </section>
-        <section className="lg:p-20 flex flex-col md:p-6 xs:px-10 xs:py-3 s:py-2 s:px-8 lg:text-lg text-sm md:text-lg ">
-          <p className="text-center tracking-wide ">
-            <span className="font-bold">Malm Green & Lerner</span>
+        <article className="lg:p-20 bg-darkBlue flex flex-col md:p-10 s:p-9 xs:p-8">
+          <p className="text-center whitespace-pre-line text-base text-xl lg:p-10 p-6 s:text-md xs:text-sm">
+            <span className="font-bold text-base text-xl s:text-md xs:text-sm">
+              Malm Green & Lerner Abogados
+            </span>
             {t("landingP1")}
           </p>
-          <p className="text-center tracking-wide ">{t("landingP2")}</p>
-        </section>
+        </article>
       </div>
     </>
   );

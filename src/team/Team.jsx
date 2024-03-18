@@ -11,7 +11,7 @@ const TEXT = [
 export default function Team() {
   const { t } = useTranslation();
   return (
-    <div className="p-20 flex justify-center flex-col font-title">
+    <div className="p-20 flex justify-center flex-col font-title bg-base">
       <h1 className=" mx-auto mb-10 font-title text-darkBlue font-bold flex ">
         {t("ourteam")}
       </h1>

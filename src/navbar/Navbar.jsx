@@ -1,5 +1,6 @@
 import { useState } from "react";
-import logo from "../img/mainlogo.png";
+import MGLlogo from "../img/logo.svg";
+import Xicon from "../img/x.png";
 //import enLogo from "../img/lawyers.png";
 import { Link } from "react-router-dom";
 import burguer from "../img/burguer.svg";
@@ -12,29 +13,58 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="bg-white flex lg:justify-center md:justify-between s:justify-between xs:justify-between xs:m-3 s:m-4 lg:gap-60 lg:m-4 sm:m-4 items-center">
-      <Link to="/">
-        <img className="lg:p-2 h-6 lg:h-10 sm:m-1 lg:m-0" src={logo} />
-      </Link>
-      <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
-        <Nav />
-      </div>
-      <button
-        id="burguer"
-        className="lg:hidden bg-white border-none"
-        onClick={handleButton}
-      >
-        {isOpen ? (
-          "X"
-        ) : (
-          <img src={burguer} alt="burguer" className="h-6 bg-white" />
-        )}
-      </button>
+    <>
+      {!isOpen ? (
+        <nav className="w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
+          <Link to="/">
+            <img
+              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
+              src={MGLlogo}
+            />
+          </Link>
+          <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
+            <Nav />
+          </div>
+
+          <button
+            id="burguer"
+            className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7"
+            onClick={handleButton}
+          >
+            <img src={burguer} alt="burguer" className="h-6 bg-darkBlue" />
+          </button>
+        </nav>
+      ) : (
+        <nav className="w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
+          <Link to="/">
+            <img
+              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
+              src={MGLlogo}
+            />
+          </Link>
+          <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
+            <Nav />
+          </div>
+          <button
+            id="xicon"
+            className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7"
+            onClick={handleButton}
+          >
+            <img src={Xicon} alt="xicon" className="h-4 p-1 bg-white" />;
+          </button>
+        </nav>
+      )}
       {isOpen && (
-        <section className="bg-darkBlue">
+        <section className="bg-darkBlue w-[100vw] md:flex justify-center md:h-20">
           <Nav />
         </section>
       )}
-    </nav>
+    </>
   );
 }
+// {
+
+/* ;
+ 
+
+; */
