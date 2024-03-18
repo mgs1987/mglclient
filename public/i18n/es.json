@@ -4,11 +4,10 @@
     "nav3":"ÁREAS DE PRÁCTICA",
     "nav4":"CONTACTO",
     "landingP1":
-     " surge como un referente en el ámbito legal, combinando su experiencia judicial, conocimientos académicos y una sólida red de contactos para ofrecer a sus clientes servicios legales de calidad y  asesoramiento estratégico.",
-    "landingP2":
-     "La firma se destaca por su compromiso con la excelencia, la ética profesional y la defensa efectiva de los intereses de sus clientes, consolidándose como una opción confiable y confiable en el panorama jurídico actual",
+     " surge como una referencia en el ámbito legal de Argentina y Latinoamérica, a partir del conocimiento y la experiencia de sus miembros, así como también el compromiso con la excelencia y la ética profesional, para ofrecer a sus clientes servicios legales de calidad y asesoramiento estratégico, tanto en idioma español, inglés y francés",
+    
      "ourtrajectory":"Nuestra Trayectoria",
-     "ourtrajectoryText1":"Hablar de los éxitos, evolución de los servicios, recordar Cómo se resolvieron situaciones de conflicto, genera un sentimiento de unidad y lealtad de los trabajadores hacia la compañía. Asimilar lo que se ha hecho por la organización crea un sentido de pertenencia que solo se logra a través del tiempo.",
+     "ourtrajectoryText1":"Hablar de los éxitos, evolución de los servicios, recordar cómo se resolvieron situaciones de conflicto, genera un sentimiento de unidad y lealtad de los trabajadores hacia la compañía. Asimilar lo que se ha hecho por la organización crea un sentido de pertenencia que solo se logra a través del tiempo.",
      "ourtrajectoryText2":"Muchas veces, las compañías agregan a sus logos publicitarios la cantidad de años que llevan en el mercado. Esto es para que los clientes perciban como la empresa ha logrado mantenerse en el tiempo, reinventarse y la capacidad de conectarse con ellos a través de las distintas tecnologías según la época. Esto denota el ánimo de la organización por superar a la competencia y satisfacer las necesidades de los consumidores, lo que genera lealtad por parte de ellos.",
      "ourtrajectoryText3":"La historia de una empresa es el mejor argumento para cerrar alianzas, fidelización de clientes y superar a la competencia, ya que se hace referencia a hechos comprobables y contados de primera fuente.",
      "ourteam":"Miembros",
@@ -16,9 +15,15 @@
      "partner1":"Socio",
      "partner2":"Of Counsel",
      "sendButton":"Enviar",
-     "contactus":"Contactate con nosotros",
+     "contactus":"Contáctate con nosotros",
      "completename":" Nombre y apellido",
       "phone":" Telefono",
      "email":" Correo electronico",
-     "message":" Mensaje"
+     "message":" Mensaje",
+     "DP":"Derecho Penal",
+     "DC":"Derecho Constitucional",
+     "DI":"Derecho Internacional",
+    "DPDescription":"El estudio, a partir de la amplia experiencia de sus miembros, ofrece servicios tanto de asesoramiento, acusación, defensa y compliance, en materia de derecho penal general, penal tributario, penal cambiario, penal aduanero, anticorrupción, y lavado de dinero. Además, ofrece servicios para casos de estafas e investigaciones complejas, violencia de género y abusos sexuales, infracciones a leyes especiales (Marca y Ambiental, entre otras),así como también responsabilidad médica, otra de las especialidades de nuestros socios.",
+    "DCDescription":"La firma, con sólidos antecedentes en materia constitucional, ofrece asesoramiento en materia de derecho constitucional, elaboración de leyes, reglamentos y decretos, así como también en la interposición de amparos y acciones de clase, incluyendo litigios ante la Corte Suprema de Justicia de la Nación.",
+    "DIDescription":"La experiencia en materia internacional de los socios permite ofrecer servicios en asuntos internacionales que incluyen desde restituciones internacionales de menores y extradiciones, a interposición de medidas cautelares ante los organismos supranacionales a lo largo de Latinoamérica y organismos internacionales. Además, cuenta con una red de contactos en diferentes países de América que permite un abordaje integral de los asuntos a tratar."
     }

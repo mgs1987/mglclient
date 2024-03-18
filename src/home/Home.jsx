@@ -4,7 +4,7 @@ import Trajectory from "../trajectory/Trajectory";
 import Team from "../team/Team";
 import Contactus from "../contactus/Contactus";
 import Areas from "../areas/Areas";
-
+import Map from "../map/Map";
 export default function Home() {
   return (
     <div className="w-screen">
@@ -14,6 +14,7 @@ export default function Home() {
       <Team />
       <Areas />
       <Contactus />
+      <Map />
     </div>
   );
 }

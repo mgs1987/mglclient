@@ -10,7 +10,7 @@ export default function Contactus() {
     setInfoForm({ ...infoForm, [name]: value });
   };
   return (
-    <div className="flex flex-col justify-center items-center lg:ml-3">
+    <div className="flex flex-col justify-center items-center bg-base">
       <h1 className="font-title text-darkBlue flex justify-center mt-16 s:text-2xl xs:text-2xl xs:mt-8 s:mt-11 md:text-3xl">
         {t("contactus")}
       </h1>
@@ -21,28 +21,28 @@ export default function Contactus() {
       >
         <input
           onChange={handleChange}
-          className="font-title lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 lg:ml-0 rounded-md border-hidden bg-gray-100 "
+          className="font-title lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 lg:ml-0 rounded-md border-hidden bg-gray-100 shadow-xl "
           placeholder={t("completename")}
           type="text"
           name="user_name"
         />
         <input
           onChange={handleChange}
-          className="font-title lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden "
+          className="font-title lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden shadow-xl "
           placeholder={t("phone")}
           type="text"
           name="phone"
         />
         <input
           onChange={handleChange}
-          className="font-title  lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden "
+          className="font-title  lg:w-2/3 lg:h-[50px] h-[30px] lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden shadow-xl "
           placeholder={t("email")}
           type="text"
           name="user_email"
         />
         <textarea
           onChange={handleChange}
-          className="font-title  lg:w-2/3 lg:h-[90px] h-[50px] lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden"
+          className="font-title  lg:w-2/3 lg:h-[90px] h-[50px] shadow-xl lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden"
           placeholder={t("message")}
           type="text"
           name="description"
