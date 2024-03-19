@@ -25,7 +25,7 @@ export default function Nav() {
             {t("nav2")}
           </h2>
         </NavLink>
-        <NavLink to="/home/areas" className="no-underline mx-3 ">
+        <NavLink to="/areas" className="no-underline mx-3 ">
           <h2 className="text-sm lg:text-white sm:text-white xs:text-white s:text-white">
             {t("nav3")}
           </h2>

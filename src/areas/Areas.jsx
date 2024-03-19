@@ -23,17 +23,17 @@ export default function Areas() {
           </section>
         </section>
         <section className="lg:h-76  p-6 m-2 flex flex-row md:py-3 w-[65vw] xs:h-16 s:h-16 shadow-xl">
-          <img
-            src={Const}
-            alt={"item"}
-            className="h-16 w-auto s:h-12 md:m-4 xs:h-10 xs:p-1"
-          />
-          <section className="flex flex-col items-start justify-center lg:mx-6 md:mx-5 ">
+          <section className="flex flex-col items-end justify-end lg:mx-6 md:mx-5 ">
             <h2 className="s:mx-6 s:text-md xs:mx-3">{t("DC")}</h2>
             <p className="text-justify xs:hidden s:hidden">
               {t("DCDescription")}
             </p>
           </section>
+          <img
+            src={Const}
+            alt={"item"}
+            className="h-16 w-auto s:h-12 md:m-4 xs:h-10 xs:p-1"
+          />
         </section>
         <section className="lg:h-76  bg-darkBlue text-white p-6 m-2 flex md:py-3 flex-row w-[65vw] xs:h-16 s:h-16">
           <img
