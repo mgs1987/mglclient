@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 import validate from "./validate";
 
-const Form = ({ client, setClient, data }) => {
+const Form = ({ partner, setPartner, data }) => {
   const [input, setInput] = useState({
     id: "",
     name: "",
-    type_bike: "",
-    upkeep: "",
-    phone_number: "",
-    date: "",
-    observations: "",
+    rol: "",
+    speciality: "",
+    email: "",
+    linkedin: "",
+    description: "",
   });
 
   const [error, setError] = useState({
     name: "",
-    type_bike: "",
-    upkeep: "",
-    phone_number: "",
-    date: "",
-    observations: "",
+    rol: "",
+    speciality: "",
+    email: "",
+    linkedin: "",
+    description: "",
   });
 
   const generarId = () => {
@@ -27,20 +27,20 @@ const Form = ({ client, setClient, data }) => {
     return random + fecha;
   };
 
-  /*   useEffect(() => {
+  useEffect(() => {
     if (Object.keys(data).length) {
       console.log(data);
       setInput({
         id: data.id,
         name: data.name,
-        type_bike: data.type_bike,
-        upkeep: data.upkeep,
-        phone_number: data.phone_number,
-        date: data.date,
-        observations: data.observations,
+        rol: data.rol,
+        speciality: data.speciality,
+        email: data.email,
+        linkedin: data.linkedin,
+        description: data.description,
       });
     }
-  }, [data]); */
+  }, [data]);
 
   const handleChangeInput = (event) => {
     const { value, name } = event.target;
@@ -69,33 +69,33 @@ const Form = ({ client, setClient, data }) => {
     }
 
     if (data.id) {
-      client.id = data.id;
-      const upDateClient = client.map((e) =>
-        e.id === client.id ? client : upDateClient
+      partner.id = data.id;
+      const upDatePartner = partner.map((e) =>
+        e.id === partner.id ? partner : upDatePartner
       );
-      setClient(upDateClient);
+      setPartner(upDatePartner);
     } else {
       input.id = generarId();
-      setClient([...client, input]);
+      setPartner([...partner, input]);
     }
 
     if (!Object.keys(error).length) {
       setInput({
         name: "",
-        type_bike: "",
-        upkeep: "",
-        phone_number: "",
-        date: "",
-        observations: "",
+        rol: "",
+        speciality: "",
+        email: "",
+        linkedin: "",
+        description: "",
       });
 
       setError({
         name: "",
-        type_bike: "",
-        upkeep: "",
-        phone_number: "",
-        date: "",
-        observations: "",
+        rol: "",
+        speciality: "",
+        email: "",
+        linkedin: "",
+        description: "",
       });
     }
   };
@@ -143,17 +143,17 @@ const Form = ({ client, setClient, data }) => {
             Rol
           </label>
           <input
-            id="bike"
-            type="text"
-            name="type_bike"
-            value={input.type_bike}
+            id="rol"
+            type="rol"
+            name="rol"
+            value={input.rol}
             onChange={handleChangeInput}
             placeholder="Figura dentro de la firma"
             className="border-hidden bg-gray-100 w-11/12 p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.type_bike && (
-              <span className="text-red-700 text-xs">{error.type_bike}</span>
+            {error.rol && (
+              <span className="text-red-700 text-xs">{error.rol}</span>
             )}
           </>
         </div>
@@ -165,17 +165,17 @@ const Form = ({ client, setClient, data }) => {
             Especialidad
           </label>
           <input
-            id="service"
+            id="speciality"
             type="text"
-            name="upkeep"
-            value={input.upkeep}
+            name="speciality"
+            value={input.speciality}
             onChange={handleChangeInput}
             placeholder="área de profundidad"
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.upkeep && (
-              <span className="text-red-700 text-xs">{error.upkeep}</span>
+            {error.speciality && (
+              <span className="text-red-700 text-xs">{error.speciality}</span>
             )}
           </>
         </div>
@@ -196,8 +196,8 @@ const Form = ({ client, setClient, data }) => {
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.phone_number && (
-              <span className="text-red-700 text-xs">{error.phone_number}</span>
+            {error.email && (
+              <span className="text-red-700 text-xs">{error.email}</span>
             )}
           </>
         </div>
@@ -209,17 +209,17 @@ const Form = ({ client, setClient, data }) => {
             LinkedIn
           </label>
           <input
-            id="date"
+            id="linked"
             type="url"
-            name="url"
-            value={input.date}
+            name="linkedin"
+            value={input.linkedin}
             onChange={handleChangeInput}
             placeholder="url"
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.date && (
-              <span className="text-red-700 text-xs">{error.date}</span>
+            {error.linkedin && (
+              <span className="text-red-700 text-xs">{error.linkedin}</span>
             )}
           </>
         </div>
@@ -233,24 +233,23 @@ const Form = ({ client, setClient, data }) => {
           <textarea
             id="area"
             type="text"
-            name="observations"
-            value={input.observations}
+            name="description"
+            value={input.description}
             onChange={handleChangeInput}
             placeholder="Perfil del socio/ trayectoria/ experiencia"
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
-          {/* <>
-            {error.observations && (
-              <span className="text-red-700 text-xs">{error.observations}</span>
+          <>
+            {error.description && (
+              <span className="text-red-700 text-xs">{error.description}</span>
             )}
-          </> */}
+          </>
         </div>
         <button
           type="submit"
           className="border-transparent bg-darkBlue w-fit p-2 m-2 text-white font-bold  hover:bg-indigo-800 cursor-pointer"
         >
-          CREAR
-          {/* {data.id ? "EDITAR" : "AGENDAR"} */}
+          {data.id ? "EDITAR" : "AGENDAR"}
         </button>
       </form>
     </div>
