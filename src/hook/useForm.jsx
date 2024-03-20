@@ -13,13 +13,10 @@ export const useForm = (initialForm, validationsForm) => {
     setErrors(validationsForm(infoForm));
   };
 
-  const handleSubmit = () => {};
-
   return {
     infoForm,
     errors,
     handleChange,
     handleBlur,
-    handleSubmit,
   };
 };
