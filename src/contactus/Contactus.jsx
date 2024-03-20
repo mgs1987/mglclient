@@ -1,5 +1,10 @@
-import { useForm } from "../hook/useForm";
 import { useTranslation } from "react-i18next";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useForm } from "../hook/useForm";
+// const VITE_YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
+// const VITE_YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+// const VITE_YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
 
 const initialForm = { user_name: "", phone: "", user_email: "", message: "" };
 
@@ -30,11 +35,30 @@ const validationsForm = (infoForm) => {
   return errors;
 };
 export default function Contactus() {
-  const { infoForm, errors, handleChange, handleSubmit, handleBlur } = useForm(
+  const form = useRef();
+  const { t } = useTranslation();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_09fu4lq", "template_52vytvj", form.current, {
+        publicKey: "gKJwcabML2IrdMrTb",
+      })
+      .then(
+        () => {
+          alert("OK: Formulario enviado con exito!");
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
+  };
+
+  const { infoForm, errors, handleChange, handleBlur } = useForm(
     initialForm,
     validationsForm
   );
-  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col justify-center items-center bg-base">
@@ -42,8 +66,8 @@ export default function Contactus() {
         {t("contactus")}
       </h1>
       <form
-        id="contact-form"
-        onSubmit={(e) => handleSubmit(e)}
+        ref={form}
+        onSubmit={(e) => sendEmail(e)}
         className="flex flex-col lg:ml-80 px-4 lg:p-0 lg:w-[88vw] w-[70vw]"
       >
         <input
