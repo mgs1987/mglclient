@@ -11,11 +11,11 @@ const TEXT = [
 export default function Team() {
   const { t } = useTranslation();
   return (
-    <div className="p-20 flex justify-center flex-col font-title bg-base">
-      <h1 className=" mx-auto mb-10 font-title text-darkBlue font-bold flex ">
+    <div className="md:px-16 flex justify-center flex-col font-title bg-base">
+      <h1 className="mx-auto mb-10 font-title text-darkBlue font-bold flex s:text-medium xs:text-less ">
         {t("ourteam")}
       </h1>
-      <div className="m-auto grid grid-cols-3 gap-8">
+      <div className="xs:mr-6 grid lg:grid-cols-3 lg:gap-8 md:grid-cols-2 justify-items-center md:gap-24 xs:grid-cols-1 s:grid-cols-1 s:gap-24 xs:gap-24">
         <CardPerson img={img2} name={MEMBERS[1]} description={TEXT[1]} />
         <CardPerson img={img1} name={MEMBERS[0]} description={TEXT[0]} />
         <CardPerson img={img2} name={MEMBERS[1]} description={TEXT[1]} />
