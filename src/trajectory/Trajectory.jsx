@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 const Trajectory = () => {
   const { t } = useTranslation();
   return (
-    <div className="m-auto md:px-40 s:px-20 xs:px-12 md:py-28 s:py-16 xs:py-16 max-w-screen-xl flex-row justify-center bg-base text-darkBlue font-title ">
+    <div className="m-auto md:px-40 s:px-20 xs:px-12 md:py-16 s:py-12 xs:py-12 lg:py-40 max-w-screen-xl flex-row justify-center bg-base text-darkBlue font-title ">
       <h1 className="m-auto flex justify-center s:text-medium xs:text-less">
         {t("ourtrajectory")}
       </h1>
