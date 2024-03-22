@@ -10,11 +10,14 @@ import Form from "../Form/Form";
 import "../i18n";
 import Login from "../Login/Login";
 import DashBoard from "./dashBoard/DashBoard";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       {/* <Suspense fallback="loading"></Suspense> */}
+      <ToastContainer />
       <Routes>
         <Route exact path="/" element={<Wrapper />}>
           <Route index element={<Home />} />

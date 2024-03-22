@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "../hook/useForm";
+import { toast } from "react-toastify";
 // const VITE_YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
 // const VITE_YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
 // const VITE_YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
@@ -47,10 +48,10 @@ export default function Contactus() {
       })
       .then(
         () => {
-          alert("OK: Formulario enviado con exito!");
+          toast.success("Formulario enviado con exito!");
         },
         (error) => {
-          alert(error.text);
+          toast.error(error.text);
         }
       );
   };
