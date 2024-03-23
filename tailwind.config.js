@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         title: "DM Sans, sans",
       },
+      boxShadow: {
+        sha: ["5px 5px 7px rgba(0,0,0,0.10)"],
+      },
       fontSize: { medium: "1.6rem", less: "1.3rem" },
       colors: {
         darkBlue: "#0B1F39",

@@ -14,11 +14,11 @@ export default function Map() {
         <section className="s:text-start xs:text-start xs:text-sm ">
           <h3 className="text-md s:text-sm ">Por urgencias contactarse : </h3>
           <p className="s:leading-none flex items-center s:text-sm">
-            <img
+            {/* <img
               src={wsp}
               alt="wsp"
               className="h-4 lg:mx-1 md:h-5 md:mx-2 s:mx-2 xs:mx-2"
-            />
+            /> */}
             <img
               src={tel}
               alt="tel"
@@ -32,11 +32,11 @@ export default function Map() {
               alt="wsp"
               className="h-4 lg:mx-1 md:h-5 md:mx-2 s:mx-2 xs:mx-2"
             />
-            <img
+            {/* <img
               src={tel}
               alt="tel"
               className="h-4 lg:ml-1 lg:mr-2 md:h-5 md:ml-1 md:mr-2 s:mr-2 xs:mr-2"
-            />
+            /> */}
             +1 (437) 858 2301 (Exterior)
           </p>
           <p className="leading-3 flex items-center s:text-sm">
