@@ -37,6 +37,7 @@ const validationsForm = (infoForm) => {
 };
 export default function Contactus() {
   const form = useRef();
+
   const { t } = useTranslation();
 
   const sendEmail = (e) => {
@@ -62,8 +63,8 @@ export default function Contactus() {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center bg-base">
-      <h1 className="font-title text-darkBlue flex justify-center mt-16 s:text-2xl xs:text-2xl xs:mt-8 s:mt-11 md:text-3xl">
+    <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-10">
+      <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-2xl xs:text-2xl xs:mt-8 s:mt-11 md:text-3xl">
         {t("contactus")}
       </h1>
       <form
