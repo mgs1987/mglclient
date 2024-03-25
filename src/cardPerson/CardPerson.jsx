@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import linked from "../img/linkedin.png";
 import { TbArrowForward } from "react-icons/tb";
-import { useTranslation } from "react-i18next";
 
-const CardPerson = ({ img, name, description }) => {
-  const { t } = useTranslation();
+const CardPerson = ({ name, img, rol, description }) => {
   return (
     <div className="lg:pb-20 group lg:h-96 lg:w-80 md:h-80 md:w-80 s:h-80 s:w-80 xs:h-80 xs:w-80 [perspective:1000px] pb-32 font-title border-solid border-base text-darkBlue ">
       <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[65vw] xs:m-auto s:w-[63vw] s:m-auto">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[60vw] xs:m-auto s:w-[63vw] s:m-auto">
           <img
             className="h-full w-full object-cover rounded-lg"
             src={img}
@@ -16,7 +14,7 @@ const CardPerson = ({ img, name, description }) => {
           />
           <h3 className="flex justify-center leading-none">{name}</h3>
           <span className=" text-lg flex justify-center leading-none">
-            {t("partner1")}
+            {rol}
           </span>
           <section className="xs:flex xs:flex-row xs:justify-between s:flex s:flex-row s:justify-between">
             <Link to="">
@@ -34,9 +32,7 @@ const CardPerson = ({ img, name, description }) => {
                 <h3 className="text-darkBlue font-semibold italic mb-0 px-3">
                   {name}
                 </h3>
-                <h4 className="text-black font-light mt-0 px-3">
-                  {t("partner1")}
-                </h4>
+                <h4 className="text-black font-light mt-0 px-3">{rol}</h4>
               </section>
               <p className="text-black text-justify p-3 mt-0">{description}</p>
             </div>
