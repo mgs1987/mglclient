@@ -8,7 +8,7 @@ const CardPerson = ({ img, name, description }) => {
   return (
     <div className="lg:pb-20 group lg:h-96 lg:w-80 md:h-80 md:w-80 s:h-80 s:w-80 xs:h-80 xs:w-80 [perspective:1000px] pb-32 font-title border-solid border-base text-darkBlue ">
       <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg ">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[65vw] xs:m-auto s:w-[63vw] s:m-auto">
           <img
             className="h-full w-full object-cover rounded-lg"
             src={img}

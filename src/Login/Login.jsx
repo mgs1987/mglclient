@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import validation from "./validation";
+
 const EMAIL = "prueba@gmail.com";
 const PASSWORD = "Pru3b@";
 
@@ -73,7 +74,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
       <form
         onSubmit={handleSubmit}
         className="flex justify-center flex-col bg-white shadow-md rounded-lg py-5 px-3 m-auto md:w-3/12  lg:w-3/12 mx-5 my-32 "
