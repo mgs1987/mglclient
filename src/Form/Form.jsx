@@ -1,17 +1,37 @@
 import { useEffect, useState } from "react";
 import validate from "./validate";
+import axios from "axios";
 
 const Form = ({ partner, setPartner, data }) => {
+  const [imageCloud, setImageCloud] = useState("");
   const [input, setInput] = useState({
     id: "",
-    name: "",
+    img: "",
     rol: "",
     speciality: "",
     email: "",
     linkedin: "",
     description: "",
   });
+  const uploadImage = async (e) => {
+    const file = e.target.files[0];
+    const data = new FormData();
+    // eslint-disable-next-line react/prop-types
+    data.append("file", file);
+    // eslint-disable-next-line no-undef, react/prop-types
+    data.append("upload_preset", "fb4nlbpi");
 
+    const response = await axios.post(
+      "https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload",
+      data
+    );
+    console.log(response.data.secure_url);
+    setImageCloud(response.data.secure_url);
+    //setInput({ ...input, img: response.data.secure_url });
+  };
+  const deleteImage = () => {
+    setImageCloud("");
+  };
   const [error, setError] = useState({
     name: "",
     rol: "",
@@ -101,7 +121,7 @@ const Form = ({ partner, setPartner, data }) => {
   };
 
   return (
-    <div className="md:w-1/3 lg:w-1/3 mx-5">
+    <div className="md:w-1/3 lg:w-1/3 mx-5 h-full">
       <h2 className=" font-title font-black text-2xl">Manejo de socios</h2>
       <p className="text-l mt-5 text-center mb-2 font-title">
         Añade a tus socios y{" "}
@@ -245,6 +265,22 @@ const Form = ({ partner, setPartner, data }) => {
             )}
           </>
         </div>
+
+        <h1>Seleccionar imagen de perfil</h1>
+        <input type="file" accept="image/" onChange={(e) => uploadImage(e)} />
+        {imageCloud && (
+          <div>
+            <img
+              src={imageCloud}
+              className="h-full w-full object-cover rounded-lg"
+              alt="profileImg"
+            />
+            <button type="button" onClick={deleteImage}>
+              Eliminar imagen
+            </button>
+          </div>
+        )}
+        <br />
         <button
           type="submit"
           className="border-transparent bg-darkBlue w-fit p-2 m-2 text-white font-bold  hover:bg-indigo-800 cursor-pointer"

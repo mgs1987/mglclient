@@ -2,6 +2,8 @@ import CardPerson from "../cardPerson/CardPerson";
 import img1 from "../img/guillermo.png";
 import img2 from "../img/peter.png";
 import img3 from "../img/martin.png";
+import { SlArrowLeft } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
 import { useTranslation } from "react-i18next";
 const MEMBERS = ["Guillermo Malm Green", "Pedro Malm Green", "Martin Lerner"];
 const TEXT = [
@@ -17,10 +19,20 @@ export default function Team() {
       <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-5xl ">
         {t("ourteam")}
       </h1>
-      <div className="xs:mr-6 grid lg:grid-cols-3 lg:gap-8 md:grid-cols-2 justify-items-center md:gap-24 xs:grid-cols-1 s:grid-cols-1 s:gap-24 xs:gap-24">
-        <CardPerson img={img2} name={MEMBERS[1]} description={TEXT[1]} />
-        <CardPerson img={img1} name={MEMBERS[0]} description={TEXT[0]} />
-        <CardPerson img={img3} name={MEMBERS[2]} description={TEXT[2]} />
+      <div className="xs:overflow-hidden xs:relative">
+        <div className="xs:transition xs:ease-out xs:duration-400 xs:justify-center xs:items-center lg:grid lg:grid-cols-3 lg:gap-8 justify-items-center ">
+          <CardPerson img={img2} name={MEMBERS[1]} description={TEXT[1]} />
+          <CardPerson img={img1} name={MEMBERS[0]} description={TEXT[0]} />
+          <CardPerson img={img3} name={MEMBERS[2]} description={TEXT[2]} />
+        </div>
+        <div className="lg:hidden flex justify-between">
+          <button>
+            <SlArrowLeft />
+          </button>
+          <button>
+            <SlArrowRight />
+          </button>
+        </div>
       </div>
     </div>
   );
