@@ -9,11 +9,19 @@ export default function Home() {
   return (
     <div className="w-screen">
       <Outlet />
-      <Landing />
+      <div id="landing">
+        <Landing />
+      </div>
       <Trajectory />
-      <Team />
-      <Areas />
-      <Contactus />
+      <div id="team">
+        <Team />
+      </div>
+      <div id="areas">
+        <Areas />
+      </div>
+      <div id="contactus">
+        <Contactus />
+      </div>
       <Map />
     </div>
   );
