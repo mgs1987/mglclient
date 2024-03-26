@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Penal from "../img/whitepenal.png";
 import Const from "../img/Const.png";
 import Internat from "../img/Internac.png";
+import ButtonAreas from "./ButtonAreas";
 
 export default function Areas() {
   const { t } = useTranslation();
@@ -10,8 +11,11 @@ export default function Areas() {
       <h1 className="s:text-3xl xs:text-3xl font-semibold lg:text-5xl">
         {t("practiceareas")}
       </h1>
-      <div className="flex justify-center items-center flex-col ">
-        <section className="xs:h-28 xs:w-[80vw] s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[65vw] md:w-[80vw] rounded-md">
+      <div className="lg:hidden md:hidden s:block xs:block">
+        <ButtonAreas />
+      </div>
+      <div className="xs:hidden s:hidden lg:block md:block flex justify-center items-center flex-col ">
+        <section className=" xs:hidden s:hidden xs:h-28 xs:w-[80vw] s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[65vw] md:w-[80vw] rounded-md">
           <img
             src={Penal}
             alt={"item"}
@@ -21,6 +25,7 @@ export default function Areas() {
             <h2 className="lg:my-4 s:mx-6 s:text-md xs:mx-3 font-medium lg:text-4xl md:text-3xl">
               {t("DP")}
             </h2>
+
             <p className="text-justify xs:hidden s:hidden lg:leading-6 font-light">
               {t("DPDescription")}
             </p>

@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <>
       {!isOpen ? (
-        <nav className="w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
+        <nav className="w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center fixed">
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
@@ -35,7 +35,7 @@ export default function Navbar() {
           </button>
         </nav>
       ) : (
-        <nav className="w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
+        <nav className="fixed w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
