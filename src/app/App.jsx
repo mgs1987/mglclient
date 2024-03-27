@@ -16,7 +16,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <>
-      {/* <Suspense fallback="loading"></Suspense> */}
+      {/* <Suspense fallback="loading"> </Suspense> */}
       <ToastContainer />
       <Routes>
         <Route exact path="/" element={<Wrapper />}>
