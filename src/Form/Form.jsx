@@ -13,25 +13,7 @@ const Form = ({ partner, setPartner, data }) => {
     linkedin: "",
     description: "",
   });
-  const uploadImage = async (e) => {
-    const file = e.target.files[0];
-    const data = new FormData();
-    // eslint-disable-next-line react/prop-types
-    data.append("file", file);
-    // eslint-disable-next-line no-undef, react/prop-types
-    data.append("upload_preset", "fb4nlbpi");
 
-    const response = await axios.post(
-      "https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload",
-      data
-    );
-    console.log(response.data.secure_url);
-    setImageCloud(response.data.secure_url);
-    //setInput({ ...input, img: response.data.secure_url });
-  };
-  const deleteImage = () => {
-    setImageCloud("");
-  };
   const [error, setError] = useState({
     name: "",
     rol: "",
@@ -40,6 +22,39 @@ const Form = ({ partner, setPartner, data }) => {
     linkedin: "",
     description: "",
   });
+
+  const uploadImage = async (e) => {
+    const file = e.target.files[0];
+    const data = new FormData();
+    // eslint-disable-next-line react/prop-types
+    data.append("file", file);
+    // eslint-disable-next-line no-undef, react/prop-types
+    data.append("upload_preset", "fb4nlbpi");
+
+    try {
+      const response = await axios.post(
+        "https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload",
+        data
+      );
+
+      const imageUrl = response.data.secure_url;
+      console.log(imageUrl);
+      setImageCloud(imageUrl);
+
+      setInput({
+        ...input,
+        img: imageUrl,
+      });
+      console.log(input);
+      //setInput({ ...input, img: response.data.secure_url });
+    } catch (error) {
+      console.error("Error al cargar la imagen:", error);
+    }
+  };
+
+  const deleteImage = () => {
+    setImageCloud("");
+  };
 
   const generarId = () => {
     const random = Math.random().toString(23).substr(2);
@@ -50,6 +65,7 @@ const Form = ({ partner, setPartner, data }) => {
   useEffect(() => {
     if (Object.keys(data).length) {
       console.log(data);
+
       setInput({
         id: data.id,
         name: data.name,
@@ -78,9 +94,8 @@ const Form = ({ partner, setPartner, data }) => {
     );
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     const { value, name } = event.target;
 
     if (Object.keys(error).length) {
@@ -88,41 +103,58 @@ const Form = ({ partner, setPartner, data }) => {
       alert("Verifica que todos los campos esten correctos");
     }
 
-    if (data.id) {
+    try {
+      let response;
+      if (data.id) {
+        response = await axios.put(
+          `https://api-mgl.onrender.com/partner/edit/${data.id}`
+        );
+      } else {
+        response = await axios.post(
+          "https://api-mgl.onrender.com/partner",
+          input
+        );
+      }
+
+      /*    if (data.id) {
       partner.id = data.id;
       const upDatePartner = partner.map((e) =>
         e.id === partner.id ? partner : upDatePartner
       );
       setPartner(upDatePartner);
     } else {
-      input.id = generarId();
+      input.id = generarId(); */
       setPartner([...partner, input]);
-    }
+      /*    } */
 
-    if (!Object.keys(error).length) {
-      setInput({
-        name: "",
-        rol: "",
-        speciality: "",
-        email: "",
-        linkedin: "",
-        description: "",
-      });
+      if (!Object.keys(error).length) {
+        setInput({
+          name: "",
+          rol: "",
+          speciality: "",
+          email: "",
+          linkedin: "",
+          description: "",
+        });
 
-      setError({
-        name: "",
-        rol: "",
-        speciality: "",
-        email: "",
-        linkedin: "",
-        description: "",
-      });
+        setError({
+          name: "",
+          rol: "",
+          speciality: "",
+          email: "",
+          linkedin: "",
+          description: "",
+        });
+      }
+    } catch (error) {
+      console.log("Error al enviar el formulario:", error);
+      console.log("Dettales del error:", error.response.data);
     }
   };
 
   return (
     <div className="md:w-1/3 lg:w-1/3 mx-5 h-full">
-      <h2 className=" font-title font-black text-2xl">Manejo de socios</h2>
+      <h2 className="font-title font-black text-2xl">Manejo de socios</h2>
       <p className="text-l mt-5 text-center mb-2 font-title">
         Añade a tus socios y{" "}
         <span className="text-darkBlue font-title font-bold">
@@ -257,7 +289,7 @@ const Form = ({ partner, setPartner, data }) => {
             value={input.description}
             onChange={handleChangeInput}
             placeholder="Perfil del socio/ trayectoria/ experiencia"
-            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
+            className="font-title border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
             {error.description && (
@@ -266,7 +298,7 @@ const Form = ({ partner, setPartner, data }) => {
           </>
         </div>
 
-        <h1>Seleccionar imagen de perfil</h1>
+        <h3 className="font-title">Seleccionar imagen de perfil</h3>
         <input type="file" accept="image/" onChange={(e) => uploadImage(e)} />
         {imageCloud && (
           <div>
@@ -285,7 +317,7 @@ const Form = ({ partner, setPartner, data }) => {
           type="submit"
           className="border-transparent bg-darkBlue w-fit p-2 m-2 text-white font-bold  hover:bg-indigo-800 cursor-pointer"
         >
-          {data.id ? "EDITAR" : "AGENDAR"}
+          {data.id ? "EDITAR" : "CREAR"}
         </button>
       </form>
     </div>
