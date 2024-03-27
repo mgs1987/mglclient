@@ -50,6 +50,7 @@ export default function Contactus() {
       .then(
         () => {
           toast.success("Formulario enviado con exito!");
+          setInfoForm(initialForm);
         },
         (error) => {
           toast.error(error.text);
@@ -57,7 +58,7 @@ export default function Contactus() {
       );
   };
 
-  const { infoForm, errors, handleChange, handleBlur } = useForm(
+  const { infoForm, setInfoForm, errors, handleChange, handleBlur } = useForm(
     initialForm,
     validationsForm
   );

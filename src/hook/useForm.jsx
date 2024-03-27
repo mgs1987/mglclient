@@ -15,6 +15,7 @@ export const useForm = (initialForm, validationsForm) => {
 
   return {
     infoForm,
+    setInfoForm,
     errors,
     handleChange,
     handleBlur,
