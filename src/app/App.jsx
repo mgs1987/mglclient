@@ -15,7 +15,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <>
+    <div div className="max-w-max bg-base">
       {/* <Suspense fallback="loading"> </Suspense> */}
       <ToastContainer />
       <Routes>
@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/login/form" element={<Form />} />
         </Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
