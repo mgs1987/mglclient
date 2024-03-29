@@ -71,7 +71,7 @@ export default function Contactus() {
       <form
         ref={form}
         onSubmit={(e) => sendEmail(e)}
-        className="flex flex-col lg:ml-80 px-4 lg:p-0 lg:w-[88vw] w-[70vw]"
+        className="flex flex-col lg:justify-center lg:items-center px-4 lg:p-0 lg:w-[88vw] max-w-screen-xl w-[75vw]"
       >
         <input
           value={infoForm.user_name}

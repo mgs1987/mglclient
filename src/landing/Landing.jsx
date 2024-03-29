@@ -3,15 +3,16 @@ import { useTranslation } from "react-i18next";
 
 export default function Landing() {
   const { t } = useTranslation();
+
   return (
     <>
-      <div className="text-darkBlue font-title">
-        <section className="flex justify-center relative xs:hidden s:hidden">
+      <div className="text-darkBlue font-title ">
+        <section className="flex justify-center items-center relative xs:hidden s:hidden ">
           <img
             src={bannerSL}
-            className="lg:w-[100vw] lg:h-auto md:w-[100vw] md:h-auto xs:hidden s:hidden"
+            className="lg:h-1/4 md:h-auto xs:hidden s:hidden lg:w-[100vw]"
           />
-          <h2 className="text-white font-title text-end font-light absolute bottom-0 lg:right-36 md:right-20 lg:mb-28 md:mb-10 lg:text-5xl">
+          <h2 className="text-white font-title tracking-wide font-light text-end absolute bottom-0 lg:right-72 md:right-20 lg:mb-28 md:mb-10 lg:text-4xl">
             {t("primerrenglonLarge")}
             <br /> {t("segundorenglonLarge")}
             <br /> {t("tercerrenglonLarge")}
@@ -28,14 +29,14 @@ export default function Landing() {
             {t("sextorenglonSmall")}
           </h2>
         </div>
-        <article className="lg:p-20 bg-darkBlue flex flex-col md:p-10 s:p-9 xs:p-8">
-          <p className="text-center whitespace-pre-line text-base text-xl lg:p-10 p-6 s:text-md xs:text-sm">
-            <span className="font-bold text-base text-xl s:text-md xs:text-sm">
+        <div className=" bg-darkBlue flex flex-col md:p-10 s:p-9 xs:p-8 lg:py-24">
+          <p className="text-center tracking-wider lg:leading-11 whitespace-pre-line text-base md:text-3xl lg:p-20 p-6 s:text-lg xs:text-md ">
+            <span className="font-bold text-base text-xl s:text-md xs:text-md md:text-3xl">
               Malm Green & Lerner Abogados
             </span>
             {t("landingP1")}
           </p>
-        </article>
+        </div>
       </div>
     </>
   );
