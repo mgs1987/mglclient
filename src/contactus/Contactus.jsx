@@ -3,6 +3,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "../hook/useForm";
 import { toast } from "react-toastify";
+import axios from "axios";
 // const VITE_YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
 // const VITE_YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
 // const VITE_YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
@@ -27,7 +28,7 @@ const validationsForm = (infoForm) => {
   }
   if (!infoForm.message.trim()) {
     errors.message = "El mensaje es requerido";
-  } else if (!regexNameAndMessage(infoForm.message.trim())) {
+  } else if (!regexNameAndMessage.test(infoForm.message.trim())) {
     errors.message = "El campo solo acepta letras y espacios";
   }
   if (!regexPhoneNumber.test(infoForm.phone.trim())) {
@@ -37,12 +38,10 @@ const validationsForm = (infoForm) => {
 };
 export default function Contactus() {
   const form = useRef();
-
   const { t } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm("service_09fu4lq", "template_52vytvj", form.current, {
         publicKey: "gKJwcabML2IrdMrTb",
@@ -50,6 +49,8 @@ export default function Contactus() {
       .then(
         () => {
           toast.success("Formulario enviado con exito!");
+          console.log(infoForm);
+          axios.post("https://api-mgl.onrender.com/contact", infoForm);
           setInfoForm(initialForm);
         },
         (error) => {
@@ -86,6 +87,7 @@ export default function Contactus() {
         {errors.user_name && (
           <p className="font-title text-red-500 text-xs">*{errors.user_name}</p>
         )}
+
         <input
           value={infoForm.phone}
           onChange={handleChange}
@@ -94,12 +96,10 @@ export default function Contactus() {
           placeholder={t("phone")}
           type="text"
           name="phone"
+          span
         />
         {errors.phone && (
           <>
-            <p className="font-title text-darkBlue text-xs">
-              *Campo NO obligatorio
-            </p>
             <p className="font-title text-red-500 text-xs">{errors.phone}</p>
           </>
         )}
@@ -131,6 +131,9 @@ export default function Contactus() {
         {errors.message && (
           <p className="font-title text-red-500 text-xs">*{errors.message}</p>
         )}
+        <p className="font-light font-title text-darkBlue text-end">
+          *Campo obligatorio
+        </p>
         <section className="flex lg:justify-center justify-center lg:w-2/3 lg:mt-10 mt-5 ">
           <button
             className="font-title lg:text-lg bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] lg:mb-10 mb-4 py-2 px-4"
