@@ -14,8 +14,8 @@ export default function Areas() {
       <div className="lg:hidden md:hidden s:block xs:block">
         <ButtonAreas />
       </div>
-      <div className="xs:hidden s:hidden lg:block md:block flex justify-center items-center flex-col ">
-        <section className=" xs:hidden s:hidden xs:h-28 xs:w-[80vw] s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[65vw] md:w-[80vw] rounded-md">
+      <div className="xs:hidden s:hidden lg:block md:block flex justify-center items-center flex-col max-w-screen-lg ">
+        <section className="xs:hidden s:hidden xs:h-28 xs:w-[80vw] s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] rounded-md max-w-screen-lg">
           <img
             src={Penal}
             alt={"item"}
@@ -31,7 +31,7 @@ export default function Areas() {
             </p>
           </section>
         </section>
-        <section className="xs:text-center xs:h-26 xs:w-[80vw] s:my-5 s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-white text-darkBlue lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[65vw] md:w-[80vw] shadow-sha rounded-md">
+        <section className="xs:text-center xs:h-26 xs:w-[80vw] s:my-5 s:p-3 s:w-[65vw] s:h-24 lg:h-76 bg-white text-darkBlue lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] shadow-sha rounded-md max-w-screen-lg">
           <section className="flex flex-col items-end justify-end lg:mx-6 md:mr-7 md:ml-12">
             <h2 className="s:text-center lg:my-5 s:text-md xs:mx-3 s:mx-6 s:text-md font-medium md:text-3xl lg:text-4xl">
               {t("DC")}
@@ -46,7 +46,7 @@ export default function Areas() {
             className="md:h-16 md:my-2 md:mr-6 xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-2 s:py-6"
           />
         </section>
-        <section className="xs:h-26 xs:w-[80vw] s:h-24 s:p-3 s:w-[65vw] lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[65vw] md:w-[80vw] rounded-md">
+        <section className="xs:h-26 xs:w-[80vw] s:h-24 s:p-3 s:w-[65vw] lg:h-76 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] rounded-md max-w-screen-lg">
           <img
             src={Internat}
             alt={"item"}

@@ -55,6 +55,14 @@ export default function ButtonAreas() {
           onClick={() => setAcordeon1(!acordeon1)}
           className="s:mt-6 xs:mb-14 cursor-pointer border-none xs:text-center xs:h-28 xs:w-[82vw] s:p-3 s:h-26 s:w-[75vw] bg-white text-darkBlue flex flex-row items-center shadow-sha rounded-md"
         >
+          <img
+            src={Const}
+            alt={"item"}
+            className="xs:h-9 xs:py-7 xs:px-8 s:h-10 s:px-2 s:py-6"
+          />
+          <h2 className="s:text-center text-2xl xs:mx-6 s:mx-6 font-medium">
+            {t("DC")}
+          </h2>
           {acordeon1 ? (
             <span className="text-3xl">
               <IoChevronUp />
@@ -64,14 +72,6 @@ export default function ButtonAreas() {
               <IoChevronDown />
             </span>
           )}
-          <h2 className="s:text-center text-2xl xs:mx-6 s:mx-6 font-medium">
-            {t("DC")}
-          </h2>
-          <img
-            src={Const}
-            alt={"item"}
-            className="xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-2 s:py-6"
-          />
         </button>
         <div
           className="xs:w-[82vw] s:w-[75vw] grid overflow-hidden transition-all duration-300 ease-in-out s:mt-[-38px] xs:mt-[-74px]"
