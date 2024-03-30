@@ -6,21 +6,29 @@ const Form = ({ partner, setPartner, data }) => {
   const [imageCloud, setImageCloud] = useState("");
   const [input, setInput] = useState({
     id: "",
+    name: "",
     img: "",
     rol: "",
+    rolES: "",
     speciality: "",
+    specialityES: "",
     email: "",
     linkedin: "",
     description: "",
+    descriptionES: "",
   });
 
   const [error, setError] = useState({
     name: "",
+    img: "",
     rol: "",
+    rolES: "",
     speciality: "",
+    specialityES: "",
     email: "",
     linkedin: "",
     description: "",
+    descriptionES: "",
   });
 
   const uploadImage = async (e) => {
@@ -70,10 +78,13 @@ const Form = ({ partner, setPartner, data }) => {
         id: data.id,
         name: data.name,
         rol: data.rol,
+        rolES: data.rolES,
         speciality: data.speciality,
+        specialityES: data.specialityES,
         email: data.email,
         linkedin: data.linkedin,
         description: data.description,
+        descriptionES: data.descriptionES,
       });
     }
   }, [data]);
@@ -96,15 +107,13 @@ const Form = ({ partner, setPartner, data }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const { value, name } = event.target;
 
     if (Object.keys(error).length) {
       console.log(error);
       alert("Verifica que todos los campos esten correctos");
     }
-
+    let response;
     try {
-      let response;
       if (data.id) {
         response = await axios.put(
           `https://api-mgl.onrender.com/partner/edit/${data.id}`
@@ -115,7 +124,7 @@ const Form = ({ partner, setPartner, data }) => {
           input
         );
       }
-
+      setPartner([...partner, input]);
       /*    if (data.id) {
       partner.id = data.id;
       const upDatePartner = partner.map((e) =>
@@ -124,31 +133,38 @@ const Form = ({ partner, setPartner, data }) => {
       setPartner(upDatePartner);
     } else {
       input.id = generarId(); */
-      setPartner([...partner, input]);
       /*    } */
 
       if (!Object.keys(error).length) {
         setInput({
           name: "",
+          img: "",
           rol: "",
+          rolES: "",
           speciality: "",
+          specialityES: "",
           email: "",
           linkedin: "",
           description: "",
+          descriptionES: "",
         });
 
         setError({
           name: "",
+          img: "",
           rol: "",
+          rolES: "",
           speciality: "",
+          specialityES: "",
           email: "",
           linkedin: "",
           description: "",
+          descriptionES: "",
         });
       }
     } catch (error) {
       console.log("Error al enviar el formulario:", error);
-      console.log("Dettales del error:", error.response.data);
+      console.log("Detalles del error:", error.response.data);
     }
   };
 
@@ -211,6 +227,28 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
+            htmlFor="bike"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
+          >
+            Rol (Ingles)
+          </label>
+          <input
+            id="rolES"
+            type="rolES"
+            name="rolES"
+            value={input.rolES}
+            onChange={handleChangeInput}
+            placeholder="Figura dentro de la firma"
+            className="border-hidden bg-gray-100 w-11/12 p-3 mt-2 placeholder-gray-500 rounded-sm"
+          />
+          <>
+            {error.rolES && (
+              <span className="text-red-700 text-xs">{error.rolES}</span>
+            )}
+          </>
+        </div>
+        <div className="mb-4">
+          <label
             htmlFor="service"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
@@ -228,6 +266,28 @@ const Form = ({ partner, setPartner, data }) => {
           <>
             {error.speciality && (
               <span className="text-red-700 text-xs">{error.speciality}</span>
+            )}
+          </>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="service"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
+          >
+            Especialidad (ingles)
+          </label>
+          <input
+            id="specialityES"
+            type="text"
+            name="specialityES"
+            value={input.specialityES}
+            onChange={handleChangeInput}
+            placeholder="área de profundidad"
+            className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
+          />
+          <>
+            {error.specialityES && (
+              <span className="text-red-700 text-xs">{error.specialityES}</span>
             )}
           </>
         </div>
@@ -294,6 +354,30 @@ const Form = ({ partner, setPartner, data }) => {
           <>
             {error.description && (
               <span className="text-red-700 text-xs">{error.description}</span>
+            )}
+          </>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="area"
+            className="block text-gray-700 uppercase font-title font-bold text-left"
+          >
+            DESCRIPCIÓN (ingles)
+          </label>
+          <textarea
+            id="area"
+            type="text"
+            name="descriptionES"
+            value={input.descriptionES}
+            onChange={handleChangeInput}
+            placeholder="Perfil del socio/ trayectoria/ experiencia"
+            className="font-title border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
+          />
+          <>
+            {error.descriptionES && (
+              <span className="text-red-700 text-xs">
+                {error.descriptionES}
+              </span>
             )}
           </>
         </div>

@@ -1,5 +1,15 @@
 const Partners = ({ per, setData }) => {
-  const { name, rol, speciality, email, linkedin, description } = per;
+  const {
+    name,
+    rol,
+    rolES,
+    speciality,
+    specialityES,
+    email,
+    linkedin,
+    description,
+    descriptionES,
+  } = per;
   return (
     <div className="mx-5 bg-white shadow-md px-5 py-10 rounded-lg mb-5">
       <p className="font-bold mb-3 text-gray-700 uppercase text-left">
