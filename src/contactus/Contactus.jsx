@@ -8,8 +8,6 @@ import axios from "axios";
 // const VITE_YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
 // const VITE_YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
 
-const initialForm = { user_name: "", phone: "", user_email: "", message: "" };
-
 const validationsForm = (infoForm) => {
   let errors = {};
   let regexNameAndMessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
@@ -51,7 +49,7 @@ export default function Contactus() {
           toast.success("Formulario enviado con exito!");
           console.log(infoForm);
           axios.post("https://api-mgl.onrender.com/contact", infoForm);
-          setInfoForm(initialForm);
+          setInfoForm("");
         },
         (error) => {
           toast.error(error.text);
@@ -59,10 +57,8 @@ export default function Contactus() {
       );
   };
 
-  const { infoForm, setInfoForm, errors, handleChange, handleBlur } = useForm(
-    initialForm,
-    validationsForm
-  );
+  const { infoForm, setInfoForm, errors, handleChange, handleBlur } =
+    useForm(validationsForm);
 
   return (
     <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-10">
@@ -136,7 +132,7 @@ export default function Contactus() {
         </p>
         <section className="flex lg:justify-center justify-center lg:w-2/3 lg:mt-10 mt-5 ">
           <button
-            className="font-title lg:text-lg bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] lg:mb-10 mb-4 py-2 px-4"
+            className="cursor-pointer font-title lg:text-lg bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] lg:mb-10 mb-4 py-2 px-4"
             type="submit"
           >
             {t("sendButton")}

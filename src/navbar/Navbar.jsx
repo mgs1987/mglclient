@@ -1,12 +1,14 @@
 import { useState } from "react";
 import MGLlogo from "../img/logo.svg";
 import Xicon from "../img/x.png";
-//import enLogo from "../img/lawyers.png";
+import MGLLogoEN from "../img/logoWhiteEN.svg";
 import { Link } from "react-router-dom";
 import burguer from "../img/burguer.svg";
 import Nav from "./Nav";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButton = () => {
@@ -19,13 +21,12 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
-              src={MGLlogo}
+              src={i18n.language === "es" ? MGLlogo : MGLLogoEN}
             />
           </Link>
           <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
             <Nav />
           </div>
-
           <button
             id="burguer"
             className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7"
@@ -39,7 +40,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
-              src={MGLlogo}
+              src={i18n.language === "en" ? MGLlogo : MGLLogoEN}
             />
           </Link>
           <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
@@ -62,9 +63,3 @@ export default function Navbar() {
     </>
   );
 }
-// {
-
-/* ;
- 
-
-; */
