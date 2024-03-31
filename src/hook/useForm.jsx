@@ -1,11 +1,17 @@
 import { useState } from "react";
 
-export const useForm = (initialForm, validationsForm) => {
-  const [infoForm, setInfoForm] = useState(initialForm);
+export const useForm = (validationsForm) => {
+  const [infoForm, setInfoForm] = useState({
+    user_name: "",
+    phone: "",
+    user_email: "",
+    message: "",
+  });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(infoForm);
     setInfoForm({ ...infoForm, [name]: value });
   };
   const handleBlur = (e) => {
