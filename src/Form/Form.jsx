@@ -5,13 +5,12 @@ import axios from "axios";
 const Form = ({ partner, setPartner, data }) => {
   const [imageCloud, setImageCloud] = useState("");
   const [input, setInput] = useState({
-    id: "",
     name: "",
     img: "",
     rol: "",
     rolES: "",
-    speciality: "",
-    specialityES: "",
+    specialty: "",
+    specialtyES: "",
     email: "",
     linkedin: "",
     description: "",
@@ -23,8 +22,8 @@ const Form = ({ partner, setPartner, data }) => {
     img: "",
     rol: "",
     rolES: "",
-    speciality: "",
-    specialityES: "",
+    specialty: "",
+    specialtyES: "",
     email: "",
     linkedin: "",
     description: "",
@@ -38,49 +37,27 @@ const Form = ({ partner, setPartner, data }) => {
     data.append("file", file);
     // eslint-disable-next-line no-undef, react/prop-types
     data.append("upload_preset", "fb4nlbpi");
-
-    try {
-      const response = await axios.post(
-        "https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload",
-        data
-      );
-
-      const imageUrl = response.data.secure_url;
-      console.log(imageUrl);
-      setImageCloud(imageUrl);
-
-      setInput({
-        ...input,
-        img: imageUrl,
+    await axios
+      .post("https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload", data)
+      .then((resp) => {
+        let inputURL = resp.data.secure_url;
+        setInput({ ...input, img: inputURL });
       });
-      console.log(input);
-      //setInput({ ...input, img: response.data.secure_url });
-    } catch (error) {
-      console.error("Error al cargar la imagen:", error);
-    }
   };
 
   const deleteImage = () => {
     setImageCloud("");
   };
 
-  const generarId = () => {
-    const random = Math.random().toString(23).substr(2);
-    const fecha = Date.now().toString(23);
-    return random + fecha;
-  };
-
   useEffect(() => {
     if (Object.keys(data).length) {
-      console.log(data);
-
       setInput({
-        id: data.id,
         name: data.name,
         rol: data.rol,
+        img: data.img,
         rolES: data.rolES,
-        speciality: data.speciality,
-        specialityES: data.specialityES,
+        specialty: data.specialty,
+        specialtyES: data.specialtyES,
         email: data.email,
         linkedin: data.linkedin,
         description: data.description,
@@ -91,10 +68,10 @@ const Form = ({ partner, setPartner, data }) => {
 
   const handleChangeInput = (event) => {
     const { value, name } = event.target;
-
     setInput((prevInput) => ({
       ...prevInput,
       [name]: value,
+      img: imageCloud,
     }));
 
     setError(
@@ -107,67 +84,47 @@ const Form = ({ partner, setPartner, data }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (Object.keys(error).length) {
       console.log(error);
       alert("Verifica que todos los campos esten correctos");
     }
-    let response;
     try {
       if (data.id) {
-        response = await axios.put(
-          `https://api-mgl.onrender.com/partner/edit/${data.id}`
-        );
+        await axios.put(`https://api-mgl.onrender.com/partner/edit/${data.id}`);
       } else {
-        response = await axios.post(
-          "https://api-mgl.onrender.com/partner",
-          input
-        );
+        await axios.post("https://api-mgl.onrender.com/partner", input);
+        if (!Object.keys(error).length) {
+          setInput({
+            name: "",
+            rol: "",
+            rolES: "",
+            specialty: "",
+            specialtyES: "",
+            email: "",
+            linkedin: "",
+            description: "",
+            descriptionES: "",
+          });
+
+          setError({
+            name: "",
+            rol: "",
+            rolES: "",
+            specialty: "",
+            specialtyES: "",
+            email: "",
+            linkedin: "",
+            description: "",
+            descriptionES: "",
+          });
+        }
       }
       setPartner([...partner, input]);
-      /*    if (data.id) {
-      partner.id = data.id;
-      const upDatePartner = partner.map((e) =>
-        e.id === partner.id ? partner : upDatePartner
-      );
-      setPartner(upDatePartner);
-    } else {
-      input.id = generarId(); */
-      /*    } */
-
-      if (!Object.keys(error).length) {
-        setInput({
-          name: "",
-          img: "",
-          rol: "",
-          rolES: "",
-          speciality: "",
-          specialityES: "",
-          email: "",
-          linkedin: "",
-          description: "",
-          descriptionES: "",
-        });
-
-        setError({
-          name: "",
-          img: "",
-          rol: "",
-          rolES: "",
-          speciality: "",
-          specialityES: "",
-          email: "",
-          linkedin: "",
-          description: "",
-          descriptionES: "",
-        });
-      }
     } catch (error) {
       console.log("Error al enviar el formulario:", error);
       console.log("Detalles del error:", error.response.data);
     }
   };
-
   return (
     <div className="md:w-1/3 lg:w-1/3 mx-5 h-full">
       <h2 className="font-title font-black text-2xl">Manejo de socios</h2>
@@ -178,7 +135,7 @@ const Form = ({ partner, setPartner, data }) => {
         </span>
       </p>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={(event) => handleSubmit(event)}
         className="bg-white shadow-md rounded-lg py-5 px-3 m-auto"
       >
         <div className="mb-2">
@@ -186,7 +143,7 @@ const Form = ({ partner, setPartner, data }) => {
             htmlFor="cliente"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
-            Nombre
+            Nombre Completo
           </label>
           <input
             id="cliente"
@@ -252,20 +209,20 @@ const Form = ({ partner, setPartner, data }) => {
             htmlFor="service"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
-            Especialidad
+            Especialidad (Ingles)
           </label>
           <input
-            id="speciality"
+            id="specialty"
             type="text"
-            name="speciality"
-            value={input.speciality}
+            name="specialty"
+            value={input.specialty}
             onChange={handleChangeInput}
             placeholder="área de profundidad"
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.speciality && (
-              <span className="text-red-700 text-xs">{error.speciality}</span>
+            {error.specialty && (
+              <span className="text-red-700 text-xs">{error.specialty}</span>
             )}
           </>
         </div>
@@ -274,20 +231,20 @@ const Form = ({ partner, setPartner, data }) => {
             htmlFor="service"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
-            Especialidad (ingles)
+            Especialidad (Español)
           </label>
           <input
-            id="specialityES"
+            id="specialtyES"
             type="text"
-            name="specialityES"
-            value={input.specialityES}
+            name="specialtyES"
+            value={input.specialtyES}
             onChange={handleChangeInput}
             placeholder="área de profundidad"
             className="border-hidden bg-gray-100 w-11/12  p-3 mt-2 placeholder-gray-500 rounded-sm"
           />
           <>
-            {error.specialityES && (
-              <span className="text-red-700 text-xs">{error.specialityES}</span>
+            {error.specialtyES && (
+              <span className="text-red-700 text-xs">{error.specialtyES}</span>
             )}
           </>
         </div>
@@ -337,13 +294,13 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="area"
+            htmlFor="area1"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             DESCRIPCIÓN
           </label>
           <textarea
-            id="area"
+            id="area1"
             type="text"
             name="description"
             value={input.description}
@@ -384,12 +341,12 @@ const Form = ({ partner, setPartner, data }) => {
 
         <h3 className="font-title">Seleccionar imagen de perfil</h3>
         <input type="file" accept="image/" onChange={(e) => uploadImage(e)} />
-        {imageCloud && (
+        {input.img && (
           <div>
             <img
-              src={imageCloud}
+              src={input.img}
+              alt="img_profile"
               className="h-full w-full object-cover rounded-lg"
-              alt="profileImg"
             />
             <button type="button" onClick={deleteImage}>
               Eliminar imagen

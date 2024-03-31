@@ -1,7 +1,7 @@
 import Partners from "../Partners/Partners";
 
+// eslint-disable-next-line react/prop-types
 const PartnersList = ({ partner, setData }) => {
-  console.log(partner);
   return (
     <div className="font-title md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
       {partner && partner.length ? (
