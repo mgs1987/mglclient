@@ -64,11 +64,9 @@ export default function Nav() {
           >
             {LANGUAGES.map(({ code, label }) => {
               return (
-                <>
-                  <option className=" text-white" key={code} value={code}>
-                    {label}
-                  </option>
-                </>
+                <option className=" text-white" key={code} value={code}>
+                  {label}
+                </option>
               );
             })}
           </select>

@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const Partners = ({ per, setData }) => {
+const Partners = ({ per, setData, partner }) => {
   const {
     partner_id,
     name,
@@ -17,17 +18,36 @@ const Partners = ({ per, setData }) => {
   } = per;
 
   const handleDelete = async (partner_id) => {
-    console.log(partner_id);
-    await axios
-      .put(`https://api-mgl.onrender.com/partner/delete/${partner_id}`)
-      .then((res) =>
-        res.status === 200 ? toast.success(res.data.message) : null
-      )
-      .catch((err) => toast.error(err.message));
+    try {
+      console.log(partner_id);
+      await axios.put(
+        `https://api-mgl.onrender.com/partner/delete/${partner_id}`
+      );
+      // Actualizar el estado para reflejar el cambio
+      setData((prevData) =>
+        prevData.map((item) => {
+          if (item.partner_id === partner_id) {
+            return { ...item, active: !item.active };
+          }
+          return item;
+        })
+      );
+      /* console.log(per.active);
+      console.log(setData); */
+      toast.success("Socio eliminado exitosamente");
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
+  useEffect(() => {}, [per]);
+
   return (
-    <div className="mx-2 bg-white shadow-md px-5 py-10 rounded-lg mb-5 lg:flex flex-row lg:justify-center ">
+    <div
+      className={`${
+        per.active ? "bg-white" : "bg-gray-300"
+      } mx-2 shadow-md px-5 py-10 rounded-lg mb-5 lg:flex flex-row lg:justify-center`}
+    >
       <div>
         <img
           src={img}
@@ -73,7 +93,7 @@ const Partners = ({ per, setData }) => {
         <div className="flex justify-evenly mt-5">
           <button
             className="bg-darkBlue hover:bg-green-800 cursor-pointer px-3 py-1 text-white font-bold rounded-sm "
-            onClick={() => setData(per)}
+            onClick={() => setData({ ...per })}
           >
             Editar
           </button>
@@ -81,7 +101,7 @@ const Partners = ({ per, setData }) => {
             className="bg-red-900 hover:bg-red-600 cursor-pointer px-3 py-1 text-white font-bold rounded-sm"
             onClick={() => handleDelete(partner_id)}
           >
-            Eliminar
+            {per.active ? "Desactivar" : "Activar"}
           </button>
         </div>
       </div>
