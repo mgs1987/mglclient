@@ -9,7 +9,6 @@ const Trajectory = () => {
       <section className="flex-row text-center tracking-wide lg:text-lg xs:text-md">
         <p className="">{t("ourtrajectoryText1")}</p>
         <p className="">{t("ourtrajectoryText2")}</p>
-        <p className="">{t("ourtrajectoryText3")}</p>
       </section>
     </div>
   );
