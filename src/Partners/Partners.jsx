@@ -19,7 +19,7 @@ const Partners = ({ per, setData }) => {
   const handleDelete = async (partner_id) => {
     console.log(partner_id);
     await axios
-      .delete(`https://api-mgl.onrender.com/partner/delete/${partner_id}`)
+      .put(`https://api-mgl.onrender.com/partner/delete/${partner_id}`)
       .then((res) =>
         res.status === 200 ? toast.success(res.data.message) : null
       )
