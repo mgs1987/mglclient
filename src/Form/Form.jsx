@@ -90,7 +90,6 @@ const Form = ({ partner, setPartner, data }) => {
     }
 
     const updatePartner = {
-      ...input,
       partner_id: data.partner_id,
       name: input.name,
       rol: input.rol,
