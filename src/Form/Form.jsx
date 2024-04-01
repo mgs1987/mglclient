@@ -88,9 +88,54 @@ const Form = ({ partner, setPartner, data }) => {
       console.log(error);
       alert("Verifica que todos los campos esten correctos");
     }
+
+    const updatePartner = {
+      ...input,
+      partner_id: data.partner_id,
+      name: data.name,
+      rol: data.rol,
+      img: data.img,
+      rolES: data.rolES,
+      specialty: data.specialty,
+      specialtyES: data.specialtyES,
+      email: data.email,
+      linkedin: data.linkedin,
+      description: data.description,
+      descriptionES: data.descriptionES,
+    };
+
     try {
-      if (data.id) {
-        await axios.put(`https://api-mgl.onrender.com/partner/edit/${data.id}`);
+      if (data.partner_id) {
+        console.log(data.partner_id);
+        console.log(updatePartner);
+        await axios.put(
+          `https://api-mgl.onrender.com/partner/edit/${data.partner_id}`,
+          updatePartner
+        );
+
+        setInput({
+          name: "",
+          rol: "",
+          rolES: "",
+          specialty: "",
+          specialtyES: "",
+          email: "",
+          linkedin: "",
+          description: "",
+          descriptionES: "",
+        });
+
+        setError({
+          name: "",
+          rol: "",
+          rolES: "",
+          specialty: "",
+          specialtyES: "",
+          email: "",
+          linkedin: "",
+          description: "",
+          descriptionES: "",
+        });
       } else {
         await axios.post("https://api-mgl.onrender.com/partner", input);
         if (!Object.keys(error).length) {
@@ -358,7 +403,7 @@ const Form = ({ partner, setPartner, data }) => {
           type="submit"
           className="border-transparent bg-darkBlue w-fit p-2 m-2 text-white font-bold  hover:bg-indigo-800 cursor-pointer"
         >
-          {data.id ? "EDITAR" : "CREAR"}
+          {data.partner_id ? "EDITAR" : "CREAR"}
         </button>
       </form>
     </div>

@@ -1,5 +1,9 @@
+import { toast } from "react-toastify";
+import axios from "axios";
+
 const Partners = ({ per, setData }) => {
   const {
+    partner_id,
     name,
     rol,
     img,
@@ -11,6 +15,17 @@ const Partners = ({ per, setData }) => {
     description,
     descriptionES,
   } = per;
+
+  const handleDelete = async (partner_id) => {
+    console.log(partner_id);
+    await axios
+      .delete(`https://api-mgl.onrender.com/partner/delete/${partner_id}`)
+      .then((res) =>
+        res.status === 200 ? toast.success(res.data.message) : null
+      )
+      .catch((err) => toast.error(err.message));
+  };
+
   return (
     <div className="mx-2 bg-white shadow-md px-5 py-10 rounded-lg mb-5 lg:flex flex-row lg:justify-center ">
       <div>
@@ -62,7 +77,10 @@ const Partners = ({ per, setData }) => {
           >
             Editar
           </button>
-          <button className="bg-red-900 hover:bg-red-600 cursor-pointer px-3 py-1 text-white font-bold rounded-sm">
+          <button
+            className="bg-red-900 hover:bg-red-600 cursor-pointer px-3 py-1 text-white font-bold rounded-sm"
+            onClick={() => handleDelete(partner_id)}
+          >
             Eliminar
           </button>
         </div>
