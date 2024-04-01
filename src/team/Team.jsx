@@ -13,16 +13,14 @@ export default function Team() {
       .catch((e) => console.log(e));
   }, []);
 
-  const [team, setTeam] = useState();
+  const [team, setTeam] = useState([]);
   const [current, setCurrent] = useState(0);
 
   const previousSlide = () => {
-    if (current === 0) setCurrent(team.length - 1);
-    else setCurrent(current - 1);
+    setCurrent(current === 0 ? team.length - 1 : current - 1);
   };
   const nextSlide = () => {
-    if (current === team.length - 1) setCurrent(0);
-    else setCurrent(current + 1);
+    setCurrent(current === team.length - 1 ? 0 : current + 1);
   };
   const { t } = useTranslation();
 
@@ -31,7 +29,7 @@ export default function Team() {
       <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-5xl ">
         {t("ourteam")}
       </h1>
-      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center xs:flex xs:overflow-hidden xs:relative">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex xs:overflow-hidden s:w-full xs:w-full">
         {team &&
           team.map((member) => {
             return (
@@ -50,16 +48,16 @@ export default function Team() {
             );
           })}
       </div>
-      <div className="lg:hidden md:hidden h-full w-full flex justify-between items-center absolute text-3xl">
+      <div className="lg:hidden md:hidden w-full flex justify-between items-center absolute">
         <button
           onClick={previousSlide}
-          className="text-4xl border-none bg-base cursor-pointer"
+          className="text-3xl border-none bg-base cursor-pointer mx-2"
         >
           <SlArrowLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="text-4xl border-none bg-base cursor-pointer"
+          className="text-3xl border-none bg-base cursor-pointer mx-2"
         >
           <SlArrowRight />
         </button>
