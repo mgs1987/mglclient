@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Partners from "../Partners/Partners";
 
 // eslint-disable-next-line react/prop-types
 const PartnersList = ({ partner, setData }) => {
-  console.log(partner);
+  useEffect(() => {
+    console.log(partner); // SI aparece en consola
+  }, [partner]);
+
   return (
     <div className="font-title md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
       {partner && partner.length ? (
@@ -16,7 +20,7 @@ const PartnersList = ({ partner, setData }) => {
             partner.map((per) => {
               return (
                 <Partners
-                  key={per.id}
+                  key={per.partner_id}
                   per={per}
                   setData={setData}
                   partner={partner}
