@@ -92,16 +92,16 @@ const Form = ({ partner, setPartner, data }) => {
     const updatePartner = {
       ...input,
       partner_id: data.partner_id,
-      name: data.name,
-      rol: data.rol,
-      img: data.img,
-      rolES: data.rolES,
-      specialty: data.specialty,
-      specialtyES: data.specialtyES,
-      email: data.email,
-      linkedin: data.linkedin,
-      description: data.description,
-      descriptionES: data.descriptionES,
+      name: input.name,
+      rol: input.rol,
+      img: input.img,
+      rolES: input.rolES,
+      specialty: input.specialty,
+      specialtyES: input.specialtyES,
+      email: input.email,
+      linkedin: input.linkedin,
+      description: input.description,
+      descriptionES: input.descriptionES,
     };
 
     try {
@@ -109,7 +109,7 @@ const Form = ({ partner, setPartner, data }) => {
         console.log(data.partner_id);
         console.log(updatePartner);
         await axios.put(
-          `https://api-mgl.onrender.com/partner/edit/${data.partner_id}`,
+          "https://api-mgl.onrender.com/partner/edit/",
           updatePartner
         );
 
