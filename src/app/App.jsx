@@ -12,10 +12,11 @@ import Login from "../Login/Login";
 import DashBoard from "./dashBoard/DashBoard";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Error from "../error/Error";
 
 function App() {
   return (
-    <div div className="max-w-max bg-base">
+    <div className="max-w-max bg-base">
       {/* <Suspense fallback="loading"> </Suspense> */}
       <ToastContainer />
       <Routes>
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/home/login" element={<Login />} />
           <Route exact path="/login/dashboard" element={<DashBoard />} />
           <Route exact path="/login/form" element={<Form />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </div>

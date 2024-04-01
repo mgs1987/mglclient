@@ -21,32 +21,31 @@ export default function Team() {
       <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-5xl ">
         {t("ourteam")}
       </h1>
-      <div className="xs:overflow-hidden">
-        <div className="xs:flex xs:transition xs:ease-out xs:duration-400 lg:grid lg:grid-cols-3 lg:gap-8 lg:justify-items-center ">
-          {team &&
-            team.map((member) => {
-              return (
-                <CardPerson
-                  key={member.partner_id}
-                  name={member.name}
-                  img={member.img}
-                  rol={member.rol}
-                  description={member.description}
-                  rolES={member.rolES}
-                  specialtyES={member.specialtyES}
-                  descriptionES={member.descriptionES}
-                />
-              );
-            })}
-        </div>
-        <div className="lg:hidden xs:top-0 h-full w-full justify-between items-center text-3xl">
-          <button className="text-3xl">
-            <SlArrowLeft />
-          </button>
-          <button className="text-3xl">
-            <SlArrowRight />
-          </button>
-        </div>
+      <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:justify-items-center ">
+        {team &&
+          team.map((member) => {
+            return (
+              <CardPerson
+                name={member.name}
+                key={member.partner_id}
+                img={member.img}
+                rol={member.rol}
+                linkedin={member.linkedin}
+                description={member.description}
+                rolES={member.rolES}
+                specialtyES={member.specialtyES}
+                descriptionES={member.descriptionES}
+              />
+            );
+          })}
+      </div>
+      <div className="lg:hidden xs:top-0 h-full w-full justify-between items-center text-3xl">
+        <button className="text-5xl border-none bg-base">
+          <SlArrowLeft />
+        </button>
+        <button className="text-5xl border-none bg-base">
+          <SlArrowRight />
+        </button>
       </div>
     </div>
   );
