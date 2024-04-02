@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const Partners = ({ per, setData, partner }) => {
+  const [prevData, setPrevData] = useState([]);
   const {
     partner_id,
     name,

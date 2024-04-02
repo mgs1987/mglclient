@@ -91,6 +91,7 @@ const Form = ({ partner, setPartner, data }) => {
 
     const updatePartner = {
       partner_id: data.partner_id,
+      active: data.active,
       name: input.name,
       rol: input.rol,
       img: input.img,
@@ -111,7 +112,11 @@ const Form = ({ partner, setPartner, data }) => {
           "https://api-mgl.onrender.com/partner/edit/",
           updatePartner
         );
-
+        setPartner((prevPartner) =>
+          prevPartner.map((p) =>
+            p.partner_id === data.partner_id ? updatePartner : p
+          )
+        );
         setInput({
           name: "",
           rol: "",
@@ -137,6 +142,7 @@ const Form = ({ partner, setPartner, data }) => {
         });
       } else {
         await axios.post("https://api-mgl.onrender.com/partner", input);
+        setPartner([...partner, input]);
         if (!Object.keys(error).length) {
           setInput({
             name: "",
@@ -163,7 +169,7 @@ const Form = ({ partner, setPartner, data }) => {
           });
         }
       }
-      setPartner([...partner, input]);
+      /* setPartner([...partner, input]); */
     } catch (error) {
       console.log("Error al enviar el formulario:", error);
       console.log("Detalles del error:", error.response.data);
