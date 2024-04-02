@@ -29,7 +29,7 @@ export default function Team() {
       <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-5xl ">
         {t("ourteam")}
       </h1>
-      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex xs:overflow-hidden s:w-full xs:w-full">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex overflow-hidden s:w-full xs:w-full">
         {team &&
           team.map((member) => {
             return (
