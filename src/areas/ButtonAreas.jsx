@@ -24,7 +24,7 @@ export default function ButtonAreas() {
           <img
             src={Penal}
             alt={"item"}
-            className="xs:h-9 xs:py-7 xs:px-7 s:h-9 s:px-1 s:py-6"
+            className="xs:h-9 xs:py-7 xs:px-6 s:h-9 s:px-2 s:py-6"
           />
           <h2 className="flex flex-col items-start justify-center s:mx-6 text-2xl  xs:mr-4 font-medium">
             {t("DP")}
@@ -50,7 +50,7 @@ export default function ButtonAreas() {
           </p>
         </div>
       </section>
-      <section className="xs:mb-4 s:mb-14">
+      <section className="xs:mb-4 s:mb-14 ">
         <button
           onClick={() => setAcordeon1(!acordeon1)}
           className="s:mt-6 xs:mb-14 cursor-pointer border-none xs:text-center xs:h-28 xs:w-[82vw] s:p-3 s:h-26 s:w-[75vw] bg-white text-darkBlue flex flex-row items-center shadow-sha rounded-md"
@@ -58,7 +58,7 @@ export default function ButtonAreas() {
           <img
             src={Const}
             alt={"item"}
-            className="xs:h-9 xs:py-7 xs:px-8 s:h-10 s:px-2 s:py-6"
+            className="xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-3 s:py-6"
           />
           <h2 className="s:text-center text-2xl xs:mx-6 s:mx-6 font-medium">
             {t("DC")}
