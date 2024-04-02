@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import linked from "../img/linkedin.png";
-import { TbArrowForward } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 
 const CardPerson = ({
@@ -17,29 +16,29 @@ const CardPerson = ({
 
   return (
     <div
-      className="xs:flex xs:transition xs:ease-out xs:duration-40 s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[40vw] s:h-96 s:w-70 xs:h-80 xs:w-80 s:mx-4 xs:mx-6 [perspective:1000px] pb-32 border-solid border-base text-darkBlue "
-      style={{ transform: `translateX(-${current * 100}%) ` }}
+      className="xs:flex xs:transition xs:ease-out xs:duration-40 md:mx-3 md:mt-10 xs:justify-center  s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[42vw] s:h-96 s:w-70 xs:h-80 xs:w-80 s:mx-4 xs:mx-4 [perspective:1000px] pb-20 border-solid border-base text-darkBlue  "
+      style={{ transform: `translateX(-${current * 109}%) ` }}
     >
-      <div className="relative h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[68vw] xs:m-auto s:w-[63vw] s:h-96 md:m-1">
+      <div className="relative h-full transition-all duration-500 xs:mx-4 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[74vw] s:w-[73vw] s:mx-8 md:m-1">
           <img
             className="h-full w-full object-cover rounded-lg cursor-pointer"
             src={img}
             alt="foto"
           />
-          <h3 className="flex justify-center leading-none text-2xl  xs:text-center lg:text-2xl md:text-2xl">
+          <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center">
             {name}
           </h3>
-          <span className="text-2xl xs:text-xl flex justify-center leading-none lg:pb-10 md:pb-14">
+          <span className="text-2xl s:text-3xl xs:text-md flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 ">
             {i18n.language === "es" ? rolES : rol}
           </span>
         </div>
         <div className="absolute inset-0 h-full w-full text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-sha">
           <div className="flex min-h-full flex-col justify-center bg-white rounded-lg">
-            <div className="p-1 static flex flex-col justify-center ">
+            <div className="p-1 s:px-4 static flex flex-col justify-center s:h-full s:w-76">
               <section className="text-start flex flex-row justify-between">
                 <section>
-                  <h3 className="text-darkBlue font-semibold mb-0 px-3">
+                  <h3 className="text-darkBlue font-semibold mb-0 px-3 text-xl s:text-2xl">
                     {name}
                   </h3>
                   <h4 className="text-black font-light mt-0 px-3">{rol}</h4>
@@ -52,7 +51,7 @@ const CardPerson = ({
                   )}
                 </Link>
               </section>
-              <p className="text-black text-justify p-3 mt-0">
+              <p className="text-black text-justify p-3 s:py-1 mt-0 s:text-lg">
                 {i18n.language === "es" ? descriptionES : description}
               </p>
             </div>

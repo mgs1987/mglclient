@@ -61,8 +61,8 @@ export default function Contactus() {
     useForm(validationsForm);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-10">
-      <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-2xl xs:text-2xl xs:mt-8 s:mt-11 md:text-3xl">
+    <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-16 xs:pb-14">
+      <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-center xs:mt-8 s:mt-11 md:text-5xl s:text-5xl xs:text-4xl xs:text-center ">
         {t("contactus")}
       </h1>
       <form
@@ -118,7 +118,7 @@ export default function Contactus() {
           value={infoForm.message}
           onChange={handleChange}
           onBlur={handleBlur}
-          className="font-title  lg:w-2/3 lg:h-[90px] h-[50px] shadow-xl lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden"
+          className="font-title  lg:w-2/3 lg:h-[90px] h-[50px] shadow-xl lg:my-2 my-0 mt-2 lg:mt-0 lg:ml-0 rounded-md bg-gray-100  border-hidden md:h-[96px] s:h-[94px] xs:h-[94px]"
           placeholder={t("message")}
           type="text"
           name="message"
@@ -127,12 +127,12 @@ export default function Contactus() {
         {errors.message && (
           <p className="font-title text-red-500 text-xs">*{errors.message}</p>
         )}
-        <p className="font-light font-title text-darkBlue text-end">
+        <p className="font-thin leading-5 font-title text-darkBlue text-end">
           *Campo obligatorio
         </p>
         <section className="flex lg:justify-center justify-center lg:w-2/3 lg:mt-10 mt-5 ">
           <button
-            className="cursor-pointer font-title lg:text-lg bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] lg:mb-10 mb-4 py-2 px-4"
+            className="cursor-pointer font-title lg:text-2xl bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] mb-4 py-2 px-4 md:text-2xl md:h-[50px] s:text-2xl s:h-[52px] xs:text-xl xs:h-[52px]  "
             type="submit"
           >
             {t("sendButton")}

@@ -12,7 +12,7 @@ export default function Landing() {
             src={bannerSL}
             className="lg:h-1/4 md:h-auto xs:hidden s:hidden lg:w-[100vw]"
           />
-          <h2 className="text-white font-title tracking-wide font-light text-end absolute bottom-0 lg:right-72 md:right-20 lg:mb-28 md:mb-10 lg:text-4xl">
+          <h2 className="text-white font-title tracking-wide font-light text-end absolute bottom-0 lg:right-72 md:right-24 md:text-4xl lg:mb-28 md:mb-16 lg:text-4xl">
             {t("primerrenglonLarge")}
             <br /> {t("segundorenglonLarge")}
             <br /> {t("tercerrenglonLarge")}
@@ -29,9 +29,9 @@ export default function Landing() {
             {t("sextorenglonSmall")}
           </h2>
         </div>
-        <div className=" bg-darkBlue flex flex-col md:p-10 s:p-9 xs:p-8 lg:py-24">
-          <p className="text-center tracking-wider lg:leading-11 whitespace-pre-line text-base md:text-3xl lg:p-20 p-6 s:text-lg xs:text-md ">
-            <span className="font-bold text-base text-xl s:text-md xs:text-md md:text-3xl">
+        <div className=" bg-darkBlue flex flex-col lg:py-24 md:px-20 md:py-32 s:px-7 s:py-20 xs:px-7 xs:py-16 ">
+          <p className="text-center tracking-wider font-light lg:leading-loose s:leading-loose md:leading-relaxed whitespace-pre-line text-base md:text-3xl lg:p-20 p-6 s:text-lg xs:text-xl xs:leading-8 ">
+            <span className="font-semibold text-base text-xl s:text-md xs:text-md md:text-3xl">
               Malm Green & Lerner Abogados
             </span>
             {t("landingP1")}

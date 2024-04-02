@@ -25,11 +25,11 @@ export default function Team() {
   const { t } = useTranslation();
 
   return (
-    <div className="md:px-16 flex justify-center items-center flex-col font-title bg-base ">
-      <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-5xl ">
+    <div className="md:px-6 flex justify-center items-center flex-col font-title bg-base lg:py-24 s:py-10">
+      <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-4xl md:text-5xl s:text-5xl ">
         {t("ourteam")}
       </h1>
-      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex overflow-hidden s:w-full xs:w-full">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex s:w-full xs:w-full s:py-10 xs:py-10">
         {team &&
           team.map((member) => {
             return (
@@ -51,13 +51,13 @@ export default function Team() {
       <div className="lg:hidden md:hidden w-full flex justify-between items-center absolute">
         <button
           onClick={previousSlide}
-          className="text-3xl border-none bg-base cursor-pointer mx-2"
+          className="text-3xl border-none cursor-pointer mx-1 bg-transparent"
         >
           <SlArrowLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="text-3xl border-none bg-base cursor-pointer mx-2"
+          className="text-3xl border-none cursor-pointer mx-2 bg-transparent"
         >
           <SlArrowRight />
         </button>
