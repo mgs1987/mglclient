@@ -5,7 +5,7 @@ import Partners from "../Partners/Partners";
 const PartnersList = ({ partner, setData }) => {
   useEffect(() => {
     console.log(partner); // SI aparece en consola
-  }, [partner]);
+  }, [partner, setData]);
 
   return (
     <div className="font-title md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
