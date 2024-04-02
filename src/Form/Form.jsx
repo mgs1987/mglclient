@@ -212,7 +212,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="bike"
+            htmlFor="rol"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Rol
@@ -234,7 +234,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="bike"
+            htmlFor="rolES"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Rol (Ingles)
@@ -256,7 +256,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="service"
+            htmlFor="specialty"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Especialidad (Ingles)
@@ -278,7 +278,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="service"
+            htmlFor="specialtyES"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             Especialidad (Español)
@@ -300,7 +300,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="number"
+            htmlFor="email"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             correo electrónico
@@ -322,7 +322,7 @@ const Form = ({ partner, setPartner, data }) => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="date"
+            htmlFor="linked"
             className="block text-gray-700 uppercase font-title font-bold text-left"
           >
             LinkedIn
