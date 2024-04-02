@@ -17,7 +17,7 @@ const CardPerson = ({
 
   return (
     <div
-      className="xs:flex xs:transition xs:ease-out xs:duration-40 s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[40vw] s:h-96 s:w-70 xs:h-80 xs:w-80 xs:m-3 s:m-3 [perspective:1000px] pb-32 border-solid border-base text-darkBlue "
+      className="xs:flex xs:transition xs:ease-out xs:duration-40 s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[40vw] s:h-96 s:w-70 xs:h-80 xs:w-80 s:mx-4 xs:mx-6 [perspective:1000px] pb-32 border-solid border-base text-darkBlue "
       style={{ transform: `translateX(-${current * 100}%) ` }}
     >
       <div className="relative h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
