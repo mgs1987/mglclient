@@ -8,7 +8,7 @@ const PartnersList = ({ partner, setData }) => {
   }, [partner, setData]);
 
   return (
-    <div className="font-title md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+    <div className="font-title md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll h-max">
       {partner && partner.length ? (
         <>
           <h2 className="font-black text-2xl">Listado de Socios</h2>

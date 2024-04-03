@@ -21,7 +21,7 @@ const Partners = ({ per, setData, partner }) => {
   const handleDelete = async (partner_id) => {
     try {
       console.log(partner_id);
-      await axios.put(
+      const resp = await axios.put(
         `https://api-mgl.onrender.com/partner/delete/${partner_id}`
       );
       // Actualizar el estado para reflejar el cambio
@@ -35,7 +35,7 @@ const Partners = ({ per, setData, partner }) => {
       );
       /* console.log(per.active);
       console.log(setData); */
-      toast.success("Socio eliminado exitosamente");
+      toast.success(resp.data.message);
     } catch (error) {
       toast.error(error.message);
     }

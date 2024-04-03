@@ -6,7 +6,7 @@ export default function Footer() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  s:flex s:items-center  xs:flex xs:items-center xs:justify-center max-w-screen-2xl">
+      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  s:flex s:items-center  xs:flex xs:items-center xs:justify-center max-w-screen-2xl lg:w-[100vw]">
         <section className="lg:px-10 flex lg:flex-row md:flex-row s:flex-col xs:flex-col justify-center lg:py-20">
           <img
             src={logoB}

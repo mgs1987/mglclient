@@ -174,7 +174,7 @@ const Form = ({ partner, setPartner, data }) => {
     }
   };
   return (
-    <div className="md:w-1/3 lg:w-1/3 mx-5 h-full">
+    <div className="md:w-1/3 lg:w-1/3 mx-5 h-5/6">
       <h2 className="font-title font-black text-2xl">Manejo de socios</h2>
       <p className="text-l mt-5 text-center mb-2 font-title">
         Añade a tus socios y{" "}
