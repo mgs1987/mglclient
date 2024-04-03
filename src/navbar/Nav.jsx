@@ -1,9 +1,6 @@
-import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { LANGUAGES } from "../constants/index";
 import { useTranslation } from "react-i18next";
-// import UK from "../img/united-kingdom.png";
-// import SP from "../img/spain.png";
 
 export default function Nav() {
   const { i18n, t } = useTranslation();
