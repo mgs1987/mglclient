@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import validate from "./validate";
 import axios from "axios";
 
+// eslint-disable-next-line react/prop-types
 const Form = ({ partner, setPartner, data }) => {
+  const CLOUDINARY_INFO = import.meta.env.VITE_CLOUDINARY_INFO;
+  const POST_MEMBER = import.meta.env.VITE_POST_MEMBER;
+  const EDIT_MEMBER = import.meta.env.VITE_EDIT_MEMBER;
+
   const [imageCloud, setImageCloud] = useState("");
   const [input, setInput] = useState({
     name: "",
@@ -37,12 +42,10 @@ const Form = ({ partner, setPartner, data }) => {
     data.append("file", file);
     // eslint-disable-next-line no-undef, react/prop-types
     data.append("upload_preset", "fb4nlbpi");
-    await axios
-      .post("https://api.cloudinary.com/v1_1/dpeco9dlp/image/upload", data)
-      .then((resp) => {
-        let inputURL = resp.data.secure_url;
-        setInput({ ...input, img: inputURL });
-      });
+    await axios.post(CLOUDINARY_INFO, data).then((resp) => {
+      let inputURL = resp.data.secure_url;
+      setInput({ ...input, img: inputURL });
+    });
   };
 
   const deleteImage = () => {
@@ -106,12 +109,7 @@ const Form = ({ partner, setPartner, data }) => {
 
     try {
       if (data.partner_id) {
-        console.log(data.partner_id);
-        console.log(updatePartner);
-        await axios.put(
-          "https://api-mgl.onrender.com/partner/edit/",
-          updatePartner
-        );
+        await axios.put(EDIT_MEMBER, updatePartner);
         setPartner((prevPartner) =>
           prevPartner.map((p) =>
             p.partner_id === data.partner_id ? updatePartner : p
@@ -141,7 +139,7 @@ const Form = ({ partner, setPartner, data }) => {
           descriptionES: "",
         });
       } else {
-        await axios.post("https://api-mgl.onrender.com/partner", input);
+        await axios.post(POST_MEMBER, input);
         setPartner([...partner, input]);
         if (!Object.keys(error).length) {
           setInput({

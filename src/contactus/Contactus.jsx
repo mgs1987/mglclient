@@ -4,9 +4,6 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "../hook/useForm";
 import { toast } from "react-toastify";
 import axios from "axios";
-// const VITE_YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
-// const VITE_YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
-// const VITE_YOUR_PUBLIC_KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
 
 const validationsForm = (infoForm) => {
   let errors = {};
@@ -35,21 +32,30 @@ const validationsForm = (infoForm) => {
   return errors;
 };
 export default function Contactus() {
+  const SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
+  const TEMPLATE = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+  const KEY = import.meta.env.VITE_YOUR_PUBLIC_KEY;
+  const POST_CONTACTS = import.meta.env.VITE_POST_CONTACTS;
+
   const form = useRef();
   const { t } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_09fu4lq", "template_52vytvj", form.current, {
-        publicKey: "gKJwcabML2IrdMrTb",
+      .sendForm(SERVICE_ID, TEMPLATE, form.current, {
+        publicKey: KEY,
       })
       .then(
         () => {
           toast.success("Formulario enviado con exito!");
-          console.log(infoForm);
-          axios.post("https://api-mgl.onrender.com/contact", infoForm);
-          setInfoForm("");
+          axios.post(POST_CONTACTS, infoForm);
+          setInfoForm({
+            user_name: "",
+            phone: "",
+            user_email: "",
+            message: "",
+          });
         },
         (error) => {
           toast.error(error.text);
@@ -59,7 +65,6 @@ export default function Contactus() {
 
   const { infoForm, setInfoForm, errors, handleChange, handleBlur } =
     useForm(validationsForm);
-
   return (
     <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-16 xs:pb-14">
       <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-center xs:mt-8 s:mt-11 md:text-5xl s:text-5xl xs:text-4xl xs:text-center ">

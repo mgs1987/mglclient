@@ -1,4 +1,3 @@
-//import { Suspense } from "react";
 import "./App.css";
 import Home from "../home/Home";
 import Areas from "../areas/Areas";
@@ -16,8 +15,7 @@ import Error from "../error/Error";
 
 function App() {
   return (
-    <div className="max-w-max bg-base">
-      {/* <Suspense fallback="loading"> </Suspense> */}
+    <div className="app-container">
       <ToastContainer />
       <Routes>
         <Route exact path="/" element={<Wrapper />}>
