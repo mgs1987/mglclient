@@ -19,7 +19,7 @@ const DashBoard = () => {
   }, []);
   /* console.log(data); */
   return (
-    <div className="mt-12 md:flex text-center">
+    <div className="mt-12 text-center flex justify-center max-w-screen-2xl lg:w-[100vw]">
       <Form partner={partner} setPartner={setPartner} data={data} />
       {loading ? (
         <Loading />
