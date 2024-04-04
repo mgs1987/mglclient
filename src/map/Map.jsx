@@ -1,4 +1,4 @@
-import palermo from "../img/palermo.png";
+import palermo from "../img/palermo.jpg";
 import wsp from "../img/wsp.png";
 import tel from "../img/tel.png";
 import mail from "../img/mail.png";
@@ -10,7 +10,8 @@ export default function Map() {
       <img
         src={palermo}
         alt="pal"
-        className="lg:h-72 md:h-64 hidden lg:block md:block md:w-[50vw] "
+        className="lg:h-72 md:h-64 hidden lg:block md:block md:w-[50vw] lg:w-[50vw] max-w-screen-2xl"
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
       <section className="bg-darkBlue leading-3 flex justify-center flex-col items-center s:w-[100vw] xs:w-[100vw]">
         <section className="s:text-start xs:text-start xs:text-sm ">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MGLlogo from "../img/logo.svg";
 import Xicon from "../img/x.png";
-import MGLLogoEN from "../img/logoWhiteEN.svg";
+import MGLlogoEN from "../img/MGLlogoEN.svg";
 import { Link } from "react-router-dom";
 import burguer from "../img/burguer.svg";
 import Nav from "./Nav";
@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
-              src={i18n.language === "es" ? MGLlogo : MGLLogoEN}
+              src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
           <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
-              src={i18n.language === "en" ? MGLlogo : MGLLogoEN}
+              src={i18n.language === "en" ? MGLlogo : MGLlogoEN}
             />
           </Link>
           <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
