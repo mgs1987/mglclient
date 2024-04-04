@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import validation from "./validation";
 
-const EMAIL = "prueba@gmail.com";
-const PASSWORD = "Pru3b@";
-
 const Login = () => {
+  const USER_ADMIN = import.meta.env.VITE_USER_ADMIN;
+  const PASSWORD = import.meta.env.VITE_PASSWORD;
+
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
@@ -44,18 +44,7 @@ const Login = () => {
       alert("Verifica que todos los campos esten correctos");
     }
 
-    /*    if (data.id) {
-      client.id = data.id;
-      const upDateClient = client.map((e) =>
-        e.id === client.id ? client : upDateClient
-      );
-      setClient(upDateClient);
-    } else {
-      input.id = generarId();
-      setClient([...client, input]);
-    } */
-
-    if (input.email === EMAIL && input.password === PASSWORD) {
+    if (input.email === USER_ADMIN && input.password === PASSWORD) {
       setAccess(true);
       navigate("/login/dashboard");
     }
