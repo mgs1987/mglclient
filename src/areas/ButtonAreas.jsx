@@ -60,7 +60,7 @@ export default function ButtonAreas() {
             alt={"item"}
             className="xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-3 s:py-6"
           />
-          <h2 className="s:text-center text-2xl xs:mx-6 s:mx-6 font-medium">
+          <h2 className="text-2xl xs:mx-6 s:mx-6 font-medium text-start">
             {t("DC")}
           </h2>
           {acordeon1 ? (
@@ -95,7 +95,9 @@ export default function ButtonAreas() {
             className="xs:h-9 xs:py-7 xs:px-6 s:h-9 s:px-1 s:py-6"
           />
           <section className="flex flex-col items-start justify-center">
-            <h2 className="s:mx-6 text-2xl xs:mx-2 font-medium">{t("DI")}</h2>
+            <h2 className="s:mx-6 text-2xl xs:mx-2 font-medium text-start">
+              {t("DI")}
+            </h2>
           </section>
           {acordeon2 ? (
             <span className="text-3xl">
