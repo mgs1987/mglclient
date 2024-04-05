@@ -20,7 +20,7 @@ export default function Navbar() {
         <nav className="max-w-screen-2xl lg:w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
           <Link to="/">
             <img
-              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
+              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:my-5 xs:mx-10 s:my-6 s:mx-12 lg:m-1"
               src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
         <nav className="lg:max-w-screen-xl  lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
           <Link to="/">
             <img
-              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 xs:m-6 s:my-6 s:mx-8 lg:m-1"
+              className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 s:my-6 xs:my-6 xs:mx-10 s:mx-8 lg:m-1"
               src={i18n.language === "en" ? MGLlogo : MGLlogoEN}
             />
           </Link>

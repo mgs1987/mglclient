@@ -7,10 +7,10 @@ export default function Landing() {
   return (
     <>
       <div className="text-darkBlue font-title ">
-        <section className="flex justify-center items-center relative xs:hidden s:hidden ">
+        <section className="flex justify-center items-center relative xs:hidden s:hidden h-1/4 md:overflow-hidden ">
           <img
             src={bannerSL}
-            className="lg:h-1/4 md:h-auto xs:hidden s:hidden lg:w-[100vw]"
+            className="lg:h-1/4 xs:hidden s:hidden lg:w-[100vw]"
           />
           <h2 className="text-white font-title tracking-wide font-light text-end absolute bottom-0 lg:right-72 md:right-24 md:text-4xl lg:mb-28 md:mb-16 lg:text-4xl">
             {t("primerrenglonLarge")}
@@ -18,9 +18,9 @@ export default function Landing() {
             <br /> {t("tercerrenglonLarge")}
           </h2>
         </section>
-        <div className="lg:hidden md:hidden flex justify-center relative xs:h-1/4 ">
-          <img src={bannerSL} className="xs:mr-16 s:mr-10 " />
-          <h2 className="text-white font-title font-light leading-10 absolute bottom-0 right-2 mb-8 mr-4 text-3xl">
+        <div className="lg:hidden md:hidden flex justify-center items-center relative h-1/4 overflow-hidden ">
+          <img src={bannerSL} className="" />
+          <h2 className="text-white font-title font-light leading-10 xs:mt-32 xs:mr-14 s:mt-32 s:mr-20 absolute text-2xl">
             {t("primerrenglonSmall")} <br />
             {t("segundorenglonSmall")} <br />
             {t("tercerrenglonSmall")},
@@ -29,8 +29,8 @@ export default function Landing() {
             {t("sextorenglonSmall")}
           </h2>
         </div>
-        <div className=" bg-darkBlue flex flex-col lg:py-24 md:px-20 md:py-32 s:px-7 s:py-20 xs:px-7 xs:py-16 ">
-          <p className="text-center tracking-wider font-light lg:leading-loose s:leading-loose md:leading-relaxed whitespace-pre-line text-base md:text-3xl lg:p-20 p-6 s:text-lg xs:text-xl xs:leading-8 ">
+        <div className=" bg-darkBlue flex flex-col lg:p-40 md:px-20 md:py-32 s:px-6 s:py-20 xs:px-6 xs:py-16 ">
+          <p className="text-center tracking-wider font-light lg:leading-loose s:leading-loose md:leading-relaxed whitespace-pre-line text-base md:text-3xl p-6 s:text-lg xs:text-xl xs:leading-8 ">
             <span className="font-semibold text-base text-xl s:text-md xs:text-md md:text-3xl">
               Malm Green & Lerner Abogados
             </span>
