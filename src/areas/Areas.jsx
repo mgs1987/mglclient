@@ -8,7 +8,7 @@ export default function Areas() {
   const { t } = useTranslation();
   return (
     <div className="font-title text-darkBlue flex flex-col justify-center items-center xs:mr-2 bg-base lg:pt-40 md:py-20 s:pt-18 s:pb-20 xs:pt-18 xs:pb-20">
-      <h1 className="s:text-5xl xs:text-4xl font-semibold lg:text-5xl md:text-5xl">
+      <h1 className="s:text-[42px] xs:text-4xl font-semibold lg:text-5xl md:text-5xl pb-[60px] p-0">
         {t("practiceareas")}
       </h1>
       <div className="lg:hidden md:hidden s:block xs:block">
