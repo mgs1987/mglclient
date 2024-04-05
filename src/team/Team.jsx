@@ -36,7 +36,7 @@ export default function Team() {
         <Loading />
       ) : (
         <>
-          <div className="lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex s:w-full xs:w-full s:py-10 xs:py-10 xs:mx-2">
+          <div className="xs:overflow-hidden s:overflow-hidden lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center flex s:w-full xs:w-full s:pb-10 s:pt-0 xs:pt-0 xs:pb-20">
             {team &&
               team
                 .filter((member) => member.active)

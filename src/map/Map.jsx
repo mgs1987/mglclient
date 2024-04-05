@@ -6,14 +6,14 @@ import { useTranslation } from "react-i18next";
 export default function Map() {
   const { t } = useTranslation();
   return (
-    <div className="bg-base grid grid-cols-2 lg:gap-0 text-base font-title lg:h-72 lg:py-4 md:h-64 md:px-1 md:py-12 s:h-48 xs:h-48 xs:py-5 s:py-5">
+    <div className="bg-base grid grid-cols-2 xs:grid-cols-1 s:grid-cols-1 lg:gap-0 text-base font-title lg:h-72 lg:py-4 md:h-64 md:px-1 md:py-12 s:h-48 xs:h-48 xs:py-5 s:py-5">
       <img
         src={palermo}
         alt="pal"
         className="lg:h-72 md:h-64 hidden lg:block md:block md:w-[50vw] lg:w-[50vw] max-w-screen-2xl"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />
-      <section className="bg-darkBlue leading-3 flex justify-center flex-col items-center s:w-[100vw] xs:w-[100vw]">
+      <section className="bg-darkBlue leading-3 flex justify-center flex-col items-center xs:w-full xs:max-w-full">
         <section className="s:text-start xs:text-start xs:text-sm ">
           <h3 className="text-md s:text-sm ">{t("emergency")} </h3>
           <p className="s:leading-none flex items-center s:text-sm">

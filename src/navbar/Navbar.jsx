@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="lg:p-4 h-6 lg:h-11 s:h-6 md:h-8 md:m-8 s:my-6 xs:my-6 xs:mx-10 s:mx-8 lg:m-1"
-              src={i18n.language === "en" ? MGLlogo : MGLlogoEN}
+              src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
           <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
@@ -56,7 +56,7 @@ export default function Navbar() {
         </nav>
       )}
       {isOpen && (
-        <section className="bg-darkBlue w-[100vw] md:flex justify-center md:h-20">
+        <section className="bg-darkBlue w-full md:flex justify-center md:h-20">
           <Nav />
         </section>
       )}

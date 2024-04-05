@@ -19,9 +19,7 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="sm:text-white xs:text-white text-sm font-title lg:text-white s:text-white">
-            {t("nav1")}
-          </h2>
+          <h2 className="text-white  text-sm font-title">{t("nav1")}</h2>
         </Link>
         <Link
           to="team"
@@ -29,9 +27,7 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="text-sm lg:text-white sm:text-white xs:text-white s:text-white">
-            {t("nav2")}
-          </h2>
+          <h2 className="text-sm text-white">{t("nav2")}</h2>
         </Link>
         <Link
           to="areas"
@@ -39,9 +35,7 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="text-sm lg:text-white sm:text-white xs:text-white s:text-white">
-            {t("nav3")}
-          </h2>
+          <h2 className="text-sm text-white">{t("nav3")}</h2>
         </Link>
         <Link
           to="contactus"
@@ -49,9 +43,7 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="text-sm lg:text-white sm:text-white xs:text-white s:text-white">
-            {t("nav4")}
-          </h2>
+          <h2 className="text-sm text-white ">{t("nav4")}</h2>
         </Link>
         <div className="xs:flex xs:justify-end xs:m-3 s:flex s:justify-end s:m-4">
           <select

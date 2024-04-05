@@ -2,7 +2,7 @@ import bannerSL from "../img/bannerSL.png";
 import { useTranslation } from "react-i18next";
 
 export default function Landing() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -20,7 +20,11 @@ export default function Landing() {
         </section>
         <div className="lg:hidden md:hidden flex justify-center items-center relative h-1/4 overflow-hidden ">
           <img src={bannerSL} className="" />
-          <h2 className="text-white font-title font-light leading-10 xs:mt-32 xs:mr-14 s:mt-32 s:mr-20 absolute text-2xl">
+          <h2
+            className={`text-white font-title font-light leading-10 xs:mt-32 xs:mr-${
+              i18n.language === "es" ? 14 : 9
+            } s:mt-32 s:mr-20 absolute text-2xl`}
+          >
             {t("primerrenglonSmall")} <br />
             {t("segundorenglonSmall")} <br />
             {t("tercerrenglonSmall")},
