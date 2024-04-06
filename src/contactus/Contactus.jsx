@@ -133,7 +133,7 @@ export default function Contactus() {
           <p className="font-title text-red-500 text-xs">*{errors.message}</p>
         )}
         <p className="font-regular leading-5 font-title text-darkBlue text-end">
-          *Campo obligatorio
+          {t("campoobligatorio")}
         </p>
         <section className="flex lg:justify-center justify-center lg:w-2/3 lg:mt-10 mt-5 ">
           <button

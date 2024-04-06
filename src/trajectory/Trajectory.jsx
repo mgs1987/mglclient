@@ -7,7 +7,7 @@ const Trajectory = () => {
         {t("ourtrajectory")}
       </h1>
       <section className="flex-row text-center tracking-wide lg:text-lg xs:text-lg s:text-lg md:text-2xl">
-        <p className="">{t("ourtrajectoryText2")}</p>
+        <p className="text-2xl leading-9">{t("ourtrajectoryText2")}</p>
       </section>
     </div>
   );

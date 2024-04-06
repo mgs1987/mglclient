@@ -16,12 +16,7 @@ export default function Map() {
       <section className="bg-darkBlue leading-3 flex justify-center flex-col items-center xs:w-full xs:max-w-full">
         <section className="s:text-start xs:text-start xs:text-sm ">
           <h3 className="text-md s:text-sm ">{t("emergency")} </h3>
-          <p className="s:leading-none flex items-center s:text-sm">
-            {/* <img
-              src={wsp}
-              alt="wsp"
-              className="h-4 lg:mx-1 md:h-5 md:mx-2 s:mx-2 xs:mx-2"
-            /> */}
+          <p className="s:leading-none flex items-center s:text-sm ">
             <img
               src={tel}
               alt="tel"
@@ -33,22 +28,17 @@ export default function Map() {
             <img
               src={wsp}
               alt="wsp"
-              className="h-4 lg:mx-1 md:h-5 md:mx-2 s:mx-2 xs:mx-2"
+              className="h-4 lg:ml-1 lg:mr-2 md:h-5 md:ml-0 md:mr-1 s:mr-2 xs:mr-2"
             />
-            {/* <img
-              src={tel}
-              alt="tel"
-              className="h-4 lg:ml-1 lg:mr-2 md:h-5 md:ml-1 md:mr-2 s:mr-2 xs:mr-2"
-            /> */}
             +1 (437) 858 2301 (Exterior)
           </p>
           <p className="leading-3 flex items-center s:text-sm">
             <img
               src={mail}
               alt="mail"
-              className="h-4 lg:lg:mx-2 md:h-4 md:mx-2 s:mx-2 xs:ml-2 xs:mr-4 "
+              className="h-3 lg:ml-1 lg:mr-2 md:h-5 md:ml-0 md:mr-1 s:mr-2 xs:mr-2 "
             />
-            malmglerner@gmail.com
+            consultas.mglabogados@gmail.com
           </p>
         </section>
       </section>

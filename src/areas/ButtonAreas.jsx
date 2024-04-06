@@ -58,13 +58,13 @@ export default function ButtonAreas() {
           <img
             src={Const}
             alt={"item"}
-            className="xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-3 s:py-6"
+            className="xs:h-11 xs:py-7 xs:px-7 s:h-11 s:px-3 s:py-6"
           />
-          <h2 className="text-2xl xs:mx-6 s:mx-6 font-medium text-start">
+          <h2 className="text-2xl xs:mx-1 s:mx-6 font-medium text-start">
             {t("DC")}
           </h2>
           {acordeon1 ? (
-            <span className="text-3xl">
+            <span className="text-3xl mx-1">
               <IoChevronUp />
             </span>
           ) : (
@@ -92,10 +92,10 @@ export default function ButtonAreas() {
           <img
             src={Internat}
             alt={"item"}
-            className="xs:h-9 xs:py-7 xs:px-6 s:h-9 s:px-1 s:py-6"
+            className="xs:h-9  xs:py-7 xs:px-6 s:h-10 s:px-1 s:py-6"
           />
           <section className="flex flex-col items-start justify-center">
-            <h2 className="s:mx-6 text-2xl xs:mx-2 font-medium text-start">
+            <h2 className="s:mx-7 text-2xl xs:mx-1 font-medium text-start">
               {t("DI")}
             </h2>
           </section>
@@ -110,12 +110,12 @@ export default function ButtonAreas() {
           )}
         </button>
         <div
-          className="xs:w-[82vw] s:w-[75vw] grid overflow-hidden transition-all duration-300 ease-in-out s:mt-[-18px] xs:mt-[-72px]"
+          className="xs:w-[82vw] s:w-[75vw] grid overflow-hidden transition-all duration-300 ease-in-out s:mt-[-19px] xs:mt-[-72px]"
           style={{
             maxHeight: acordeon2 ? maxHeightOpen : maxHeightClosed,
           }}
         >
-          <p className="overflow-hidden text-justify bg-darkBlue text-white font-bold px-11 py-10 text-md ">
+          <p className="overflow-hidden text-justify bg-darkBlue text-white font- px-11 py-10 text-md ">
             {t("DIDescription")}
           </p>
         </div>

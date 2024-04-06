@@ -15,12 +15,12 @@
      "contactus":"Contáctate con nosotros",
      "completename":" Nombre y apellido *",
       "phone":" Teléfono (Agregar código de país y área)",
-     "email":" Correo electronico*",
+     "email":" Correo electrónico*",
      "message":" Mensaje*",
      "DP":"Derecho Penal",
      "DC":"Derecho Constitucional",
      "DI":"Derecho Internacional",
-    "DPDescription":"El estudio, a partir de la amplia experiencia de sus miembros, ofrece servicios tanto de asesoramiento, acusación, defensa y compliance, en materia de derecho penal general, penal tributario, penal cambiario, penal aduanero, anticorrupción, y lavado de dinero. Además, ofrece servicios para casos de estafas e investigaciones complejas, violencia de género y abusos sexuales, infracciones a leyes especiales (Marca y Ambiental, entre otras),así como también responsabilidad médica, otra de las especialidades de nuestros socios.",
+    "DPDescription":"El estudio, a partir de la amplia experiencia de sus miembros, ofrece servicios tanto de asesoramiento, acusación, defensa y compliance, en materia de derecho penal general, penal tributario, penal cambiario, penal aduanero, anticorrupción, y lavado de dinero. Además, ofrece servicios para casos de estafas e investigaciones complejas, violencia de género y abusos sexuales, infracciones a leyes especiales (Marca y Ambiental, entre otras), así como también responsabilidad médica, otra de las especialidades de nuestros socios.",
     "DCDescription":"La firma, con sólidos antecedentes en materia constitucional, ofrece asesoramiento en materia de derecho constitucional, elaboración de leyes, reglamentos y decretos, así como también en la interposición de amparos y acciones de clase, incluyendo litigios ante la Corte Suprema de Justicia de la Nación.",
     "DIDescription":"La experiencia en materia internacional de los socios permite ofrecer servicios en asuntos internacionales que incluyen desde restituciones internacionales de menores y extradiciones, a interposición de medidas cautelares ante los organismos supranacionales a lo largo de Latinoamérica y organismos internacionales. Además, cuenta con una red de contactos en diferentes países de América que permite un abordaje integral de los asuntos a tratar.",
     "primerrenglonLarge":" Estudio jurídico especializado en Derecho Penal,",
@@ -32,5 +32,6 @@
     "cuartorenglonSmall":"Constitucional e",
     "quintorenglonSmall":"Internacional Público",
     "sextorenglonSmall":"y Privado.",
-     "emergency":"Por urgencias contactarse : "
+     "emergency":"Por urgencias contactarse al: ",
+     "campoobligatorio":" *Campo obligatorio"
     }
