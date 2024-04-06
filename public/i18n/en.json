@@ -4,8 +4,8 @@
     "nav3":"PRACTICE AREAS",
     "nav4":"CONTACT",
     "landingP1":
-     " emerges as a reference in the legal field of Argentina and Latin America, based on the knowledge and experience of its members, as well as the commitment to excellence and professional ethics, to offer its clients quality legal services and strategic advice, both in Spanish, English, and French ",
-    "ourtrajectory":"Our Trajectory",
+     " emerges as a reference in the legal field of Argentina and Latin America, based on the knowledge and experience of its members, as well as the commitment to excellence and professional ethics, to offer its clients quality legal services and strategic advice, both in Spanish, English, and French. ",
+    "ourtrajectory":"Our History",
     "ourtrajectoryText2":"Our journey as a law firm is not merely the outcome of years of experience in the legal field, but also of an idea that has matured over time, nourished by conversations around the family table and passionate discussions about justice. We decided to combine our skills and knowledge to establish MGL Abogados, thus honoring the rich family tradition in the field of law.",
     "ourteam":"Our Team",
     "practiceareas":"Practice Areas",
@@ -18,11 +18,11 @@
     "email":" Email*",
     "message":" Message*",
     "DP":"Criminal Law",
-    "DC":"Constitucional Law",
+    "DC":"Constitutional Law",
     "DI":"International Law",
-    "DPDescription":"The firm, drawing upon the extensive experience of its members, provides services in advising, prosecution, defense, and compliance in general criminal law, tax criminal law, foreign exchange criminal law, customs criminal law, anti-corruption, and money laundering matters. Additionally, it offers services for cases involving fraud and complex investigations, gender-based violence and sexual abuse, violations of special laws (such as Trademark and Environmental laws, among others), as well as medical liability, another specialty of our partners.",
-    "DCDescription":"The firm, with a strong background in constitutional matters, provides advice on Constitutional Law, drafting laws, regulations, and decrees, as well as in filing writs of amparo and class actions, including litigation before the Supreme Court of Justice of the Nation.",
-    "DIDescription":"The partners' experience in international matters allows them to offer services in international affairs ranging from international child restitutions and extraditions to the filing of precautionary measures before supranational organizations throughout Latin America and international bodies. Additionally, they have a network of contacts in various countries in the Americas that enables a comprehensive approach to the matters at hand.",
+    "DPDescription":"The firm leverages the extensive expertise of its members to offer advisory, prosecution, defense and compliance services in general criminal law, tax criminal law, foreign exchange criminal law, customs criminal law, anti-corruption and money laundering. Additionally, the firm provides assistance in cases involving fraud, complex investigations, gender-based violence and sexual abuse, violations of special laws (such as Trademark and Environmental laws, among others) as well as medical liability, another specialty area offered by our partners.",
+    "DCDescription":"The firm, with a strong background in constitutional matters, provides advice on constitutional law, bill drafting, and regulatory matters, as well as on the filing of writs of amparo and class actions, including handling litigation before the Argentine Supreme Court of Justice.",
+    "DIDescription":"TThe partner's experience in international affairs enables them to offer a wide range of services, including international return of children, extraditions, and the filing of precautionary measures before supranational organizations across Latin America and international organizations. Furthermore, their established network of contacts in various countries throughout the Americas facilitates a comprehensive approach to addressing the matters at hand.",
     "primerrenglonLarge":"Law firm specializing in Criminal Law, Constitutional ",
     "segundorenglonLarge":" Law and Public & Private International",
     "tercerrenglonLarge":"Law",
@@ -31,6 +31,7 @@
     "cuartorenglonSmall":"Criminal Law",
     "tercerrenglonSmall":"Constitutional Law, and ",
     "quintorenglonSmall":"Public and Private ",
-    "sextorenglonSmall":"International Law",
-    "emergency":"In case of emergency, contact:"
+    "sextorenglonSmall":"International Law.",
+    "emergency":"In case of emergency, contact:",
+    "campoobligatorio":" *Mandatory field"
     }

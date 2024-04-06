@@ -1,4 +1,4 @@
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logoB from "../img/logoBlue.svg";
 import { useTranslation } from "react-i18next";
 export default function Footer() {

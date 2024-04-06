@@ -51,7 +51,7 @@ const CardPerson = ({
                   )}
                 </Link>
               </section>
-              <p className="text-black text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 mt-0 s:text-lg">
+              <p className="text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 mt-0 s:text-lg lg:leading-tight md:leading-6 xs:leading-6">
                 {i18n.language === "es" ? descriptionES : description}
               </p>
             </div>
