@@ -23,7 +23,7 @@ export default function Landing() {
           <h2
             className={`text-white font-title font-light leading-10 xs:mt-32 xs:mr-${
               i18n.language === "es" ? 14 : 9
-            } s:mt-32 s:mr-20 absolute text-2xl`}
+            } s:mt-32 s:mr-32 absolute text-2xl`}
           >
             {t("primerrenglonSmall")} <br />
             {t("segundorenglonSmall")} <br />
