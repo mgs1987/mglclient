@@ -1,9 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import logoB from "../img/logoBlue.svg";
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 export default function Footer() {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
   return (
     <>
       <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  s:flex s:items-center  xs:flex xs:items-center xs:justify-center max-w-screen-2xl lg:w-[100vw]">
@@ -15,14 +12,6 @@ export default function Footer() {
           />
           <section className="text-darkBlue flex flex-row lg:text-md md:text-sm font-title lg:mx-28 items-center lg:gap-10 md:gap-3  xs:text-xs xs:p-2 xs:gap-2 s:text-xs s:gap-4 s:p-3"></section>
         </section>
-      </div>
-      <div className="bg-base h-auto ">
-        <button
-          onClick={() => navigate("/home/login")}
-          className="rounded-md flex justify-center border-transparent bg-base w-fit text-darkBlue font-bold  hover:bg-gray-300 cursor-pointer "
-        >
-          ADMIN
-        </button>
       </div>
     </>
   );
