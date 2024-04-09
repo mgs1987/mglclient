@@ -12,7 +12,10 @@ export default function Landing() {
             src={bannerSL}
             className="lg:h-1/4 xs:hidden s:hidden lg:w-[100vw]"
           />
-          <h2 className="text-white font-title tracking-wide font-light text-end absolute bottom-0 lg:right-72 md:right-16 md:text-4xl lg:mb-28 md:mb-16 lg:text-4xl">
+          <h2
+            style={{ maxWidth: "70%", marginRight: "50px" }}
+            className="text-white text-right font-title tracking-wide font-light absolute bottom-0 lg:right-0 lg:left-64 md:right-16 md:text-4xl lg:mb-36 md:mb-16 lg:text-4xl"
+          >
             {t("primerrenglonLarge")}
             <br className="lg:block md:hidden" /> {t("segundorenglonLarge")}
             <br className="lg:block md:hidden" /> {t("tercerrenglonLarge")}
