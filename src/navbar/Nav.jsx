@@ -49,7 +49,7 @@ export default function Nav() {
           <select
             defaultValue={i18n.language}
             onChange={onChangeLang}
-            className=" text-white font-title bg-darkBlue md:w-[13vw] md:mx-8 s:w-[20vw] xs:w-[21vw] lg:w-[7vw]"
+            className=" text-white font-title bg-darkBlue lg:w-[3vw] md:w-[13vw] md:mx-8 s:w-[20vw] xs:w-[21vw]"
           >
             {LANGUAGES.map(({ code, label }) => {
               return (

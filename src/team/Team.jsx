@@ -16,7 +16,7 @@ export default function Team() {
   const { t } = useTranslation();
 
   return (
-    <div className="md:px-6 flex justify-center items-center flex-col font-title bg-base lg:pt-[5rem] s:py-10">
+    <div className="md:px-6 flex justify-center items-center flex-col font-title bg-base lg:pt-[5rem] lg:pb-[80px] s:py-10">
       <h1 className="mb-10 font-title text-darkBlue flex font-semibold text-4xl md:text-5xl s:text-5xl ">
         {t("ourteam")}
       </h1>
