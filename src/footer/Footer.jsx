@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import logoB from "../img/logoBlue.svg";
+import logoB from "../img/logoAZES.svg";
+import logoA from "../img/logoAZEN.svg";
 import IN from "../img/linkedin.png";
 import { useTranslation } from "react-i18next";
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
         <section className="lg:px-10 flex flex-col justify-center items-center lg:py-20 ">
           <Link to="/">
             <img
-              src={i18n.language === "es" ? logoB : ""}
+              src={i18n.language === "es" ? logoB : logoA}
               alt="logo"
               className="lg:p-4 md:pr-10 lg:h-11 s:h-6 s:p-4 xs:h-5 xs:p-3 md:h-8 md:mx-6 md:my-7 lg:m-1"
             />

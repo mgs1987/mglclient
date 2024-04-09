@@ -33,7 +33,7 @@ export default function Areas() {
         </section>
         <section className="lg:h-76 bg-white text-darkBlue lg:mt-[20px] lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] shadow-sha rounded-md max-w-screen-lg">
           <section className="flex flex-col items-end justify-end lg:mx-6 md:mr-7 md:ml-12 md:my-4">
-            <h2 className="lg:my-5 font-medium md:text-3xl lg:text-4xl">
+            <h2 className="lg:my-3 md:my-3 font-medium md:text-3xl lg:text-4xl">
               {t("DC")}
             </h2>
             <p className="text-justify xs:hidden s:hidden lg:leading-6 font-light">
