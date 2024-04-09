@@ -110,7 +110,7 @@ export default function ButtonAreas() {
           )}
         </button>
         <div
-          className="xs:w-[82vw] s:w-[75vw] grid overflow-hidden transition-all duration-300 ease-in-out s:mt-[-19px] xs:mt-[-72px]"
+          className="xs:w-[82vw] s:w-[75vw] grid overflow-hidden transition-all duration-300 ease-in-out s:mt-[-19px] xs:mt-[-82px]"
           style={{
             maxHeight: acordeon2 ? maxHeightOpen : maxHeightClosed,
           }}

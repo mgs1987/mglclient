@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MGLlogo from "../img/logo.svg";
+import MGLlogo from "../img/logoWHES.svg";
 import Xicon from "../img/x.png";
-import MGLlogoEN from "../img/MGLlogoEN.svg";
+import MGLlogoEN from "../img/logoWHEN.svg";
 import { Link } from "react-router-dom";
 import burguer from "../img/burguer.svg";
 import Nav from "./Nav";
