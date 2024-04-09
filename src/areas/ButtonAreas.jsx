@@ -45,7 +45,7 @@ export default function ButtonAreas() {
             maxHeight: acordeon ? maxHeightOpen : maxHeightClosed,
           }}
         >
-          <p className="overflow-hidden text-justify bg-darkBlue text-white font-bold px-11 py-10 text-md ">
+          <p className="overflow-hidden text-justify bg-darkBlue text-white font-regular px-11 py-10 text-md ">
             {t("DPDescription")}
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function ButtonAreas() {
             maxHeight: acordeon1 ? maxHeightOpen : maxHeightClosed,
           }}
         >
-          <p className="overflow-hidden text-justify bg-white text-darkBlue font-light px-11 py-10 text-md">
+          <p className="overflow-hidden text-justify leading-5 tracking-normal bg-white text-darkBlue font-light px-11 py-10 text-md">
             {t("DCDescription")}
           </p>
         </div>

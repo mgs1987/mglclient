@@ -30,7 +30,7 @@ export default function Map() {
               alt="wsp"
               className="h-4 lg:ml-1 lg:mr-2 md:h-5 md:ml-0 md:mr-1 s:mr-2 xs:mr-2"
             />
-            +1 (437) 858 2301 (Exterior)
+            +1 (437) 858 2301 {t("ext")}
           </p>
           <p className="leading-3 flex items-center s:text-sm">
             <img

@@ -4,7 +4,7 @@
     "nav3":"PRACTICE AREAS",
     "nav4":"CONTACT",
     "landingP1":
-     " emerges as a reference in the legal field of Argentina and Latin America, based on the knowledge and experience of its members, as well as the commitment to excellence and professional ethics, to offer its clients quality legal services and strategic advice, both in Spanish, English, and French. ",
+     " emerges as a reference in the legal field of Argentina and Latin America, based on the knowledge and experience of its members, as well as the commitment to excellence and professional ethics, to offer its clients quality legal services and strategic advice, both in Spanish, Portuguese, English and French. ",
     "ourtrajectory":"Our History",
     "ourtrajectoryText2":"Our journey as a law firm is not merely the outcome of years of experience in the legal field, but also of an idea that has matured over time, nourished by conversations around the family table and passionate discussions about justice. We decided to combine our skills and knowledge to establish MGL Abogados, thus honoring the rich family tradition in the field of law.",
     "ourteam":"Our Team",
@@ -33,5 +33,6 @@
     "quintorenglonSmall":"Public and Private ",
     "sextorenglonSmall":"International Law.",
     "emergency":"In case of emergency, contact:",
-    "campoobligatorio":" *Mandatory field"
+    "campoobligatorio":" *Mandatory field",
+    "ext":"(International)"
     }
