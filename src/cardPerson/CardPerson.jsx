@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import linked from "../img/linkedin.png";
 import { useTranslation } from "react-i18next";
-
+import GUILLERMO from "../img/Guillermo2.png";
+import PEDRO from "../img/Pedro2.png";
+import MARTIN from "../img/Martin2.png";
 const CardPerson = ({
   name,
-  img,
   rol,
   description,
   rolES,
@@ -16,14 +17,22 @@ const CardPerson = ({
 
   return (
     <div
-      className="xs:flex xs:transition xs:ease-out xs:duration-40 md:mx-3 md:mt-10 xs:justify-center  s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[42vw] s:h-auto s:w-[80vw] xs:h-auto xs:w-[82vw] s:mx-4 xs:mr-4 xs:ml-4 [perspective:1000px] pb-20 border-solid border-base text-darkBlue xs:pl-1 "
+      className={`xs:flex xs:transition xs:ease-out xs:duration-40 md:mx-3 md:mt-10 xs:justify-center  s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[42vw] s:h-auto s:w-[80vw] xs:h-auto xs:w-[82vw] s:mx-4 xs:mr-4 xs:ml-4 [perspective:1000px] pb-20 border-solid border-base text-darkBlue xs:pl-${
+        name === "Pedro Malm Green" ? 3 : 1
+      }`}
       style={{ transform: `translateX(-${current * 109}%) ` }}
     >
       <div className="relative h-full transition-all duration-500 xs:mx-8 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[74vw] s:w-[73vw] s:mx-8 md:m-1">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[74vw] s:w-[73vw] s:mx-9 md:m-1">
           <img
-            className="h-full w-full object-cover rounded-lg cursor-pointer"
-            src={img}
+            className="h-[345px] w-full object-cover rounded-lg cursor-pointer"
+            src={
+              name === "Guillermo Malm Green"
+                ? GUILLERMO
+                : name === "Pedro Malm Green"
+                ? PEDRO
+                : MARTIN
+            }
             alt="foto"
           />
           <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center">
