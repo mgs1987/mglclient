@@ -10,7 +10,7 @@ var MEMBERSINFO = [
     specialtyES: "Derecho Constitucional y Penal",
     rolES: "Socio",
     descriptionES:
-      "Pedro Malm Green cuenta con más de 10 años de experiencia en la Justicia Federal y en la Justicia Nacional en lo Criminal y Correccional de la Capital Federal, donde transitó por todos los cargos de la carrera judicial hasta ocupar el rol de Secretario de Juzgado. Se graduó como abogado con Diploma de Honor de la Universidad de Buenos Aires, y es Magíster en Políticas Públicas por la Universidad Torcuato Di Tella. Ha sido Docente Adjunto de la materia Derecho Penal y Procesal Penal del Instituto Universitario de Seguridad de la Ciudad y Docente Ayudante de la materia Derecho Internacional de los Derechos Humanos de la Universidad de Buenos Aires.",
+      "Pedro Malm Green cuenta con más de 10 años de experiencia en la Justicia Federal y en la Justicia Nacional en lo Criminal y Correccional de la Capital Federal, donde transitó por todos los cargos de la carrera judicial hasta ocupar el rol de Secretario de Juzgado. Se graduó como Abogado con Diploma de Honor de la Universidad de Buenos Aires, y es Magíster en Políticas Públicas por la Universidad Torcuato Di Tella. Ha sido Docente Adjunto de la materia Derecho Penal y Procesal Penal del Instituto Universitario de Seguridad de la Ciudad y Docente Ayudante de la materia Derecho Internacional de los Derechos Humanos de la Universidad de Buenos Aires.",
   },
   {
     name: "Martin Lerner",

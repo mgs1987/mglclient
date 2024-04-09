@@ -48,7 +48,9 @@ const CardPerson = ({
                   <h3 className="text-darkBlue font-semibold mb-0 px-3 text-xl">
                     {name}
                   </h3>
-                  <h4 className="text-black font-light mt-0 px-3">{rol}</h4>
+                  <h4 className="text-black font-light mt-0 px-3">
+                    {i18n.language === "es" ? rolES : rol}
+                  </h4>
                 </section>
                 <Link to={linkedin}>
                   {linkedin ? (
@@ -59,8 +61,14 @@ const CardPerson = ({
                 </Link>
               </section>
               <p
-                className="text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 mt-0 s:text-lg lg:leading-snug
-                md:leading-6 xs:leading-6"
+                className={`text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 mt-0 s:text-lg lg:leading-snug tracking-${
+                  name === "Pedro Malm Green"
+                    ? "tight"
+                    : name === "Guillermo Malm Green"
+                    ? "tight"
+                    : "normal"
+                }
+                md:leading-6 xs:leading-6`}
               >
                 {i18n.language === "es" ? descriptionES : description}
               </p>
