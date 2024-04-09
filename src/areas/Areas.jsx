@@ -31,7 +31,7 @@ export default function Areas() {
             </p>
           </section>
         </section>
-        <section className="lg:h-76 bg-white text-darkBlue lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] shadow-sha rounded-md max-w-screen-lg">
+        <section className="lg:h-76 bg-white text-darkBlue lg:mt-[20px] lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] shadow-sha rounded-md max-w-screen-lg">
           <section className="flex flex-col items-end justify-end lg:mx-6 md:mr-7 md:ml-12 md:my-4">
             <h2 className="lg:my-5 font-medium md:text-3xl lg:text-4xl">
               {t("DC")}
@@ -46,7 +46,7 @@ export default function Areas() {
             className="md:h-16 md:my-2 md:mr-6 xs:h-9 xs:py-7 xs:px-6 s:h-10 s:px-2 s:py-6"
           />
         </section>
-        <section className="lg:h-76 md:my-4 bg-darkBlue text-white lg:m-2 lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] rounded-md max-w-screen-lg">
+        <section className="lg:h-76 md:my-4 bg-darkBlue text-white lg:mt-[20px] lg:py-[50px] lg:px-[20px] m-2 md:py-3 flex flex-row lg:w-[70vw] md:w-[80vw] rounded-md max-w-screen-lg">
           <img
             src={Internat}
             alt={"item"}
