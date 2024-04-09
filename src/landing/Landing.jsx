@@ -22,11 +22,11 @@ export default function Landing() {
           <img src={bannerSL} className="" />
           <h2
             className={`text-white font-title font-light leading-10 xs:mt-32 xs:mr-${
-              i18n.language === "es" ? 14 : 9
+              i18n.language === "es" ? 14 : 8
             } s:mt-32 s:mr-22 absolute text-2xl`}
           >
             {t("primerrenglonSmall")} <br />
-            {t("segundorenglonSmall")} <br className="hidden" />
+            {t("segundorenglonSmall")} <br />
             {t("tercerrenglonSmall")},
             <br /> {t("cuartorenglonSmall")} <br />
             {t("quintorenglonSmall")} <br />
