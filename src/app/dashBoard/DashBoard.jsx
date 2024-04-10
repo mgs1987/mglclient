@@ -3,6 +3,7 @@ import Form from "../../Form/Form";
 import PartnersList from "../../PartnersList/PartnersList";
 import axios from "axios";
 import Loading from "../../loading/Loading";
+import { Link } from "react-router-dom";
 
 const DashBoard = () => {
   const MEMBERS = import.meta.env.VITE_POST_MEMBER;
@@ -17,16 +18,25 @@ const DashBoard = () => {
       .then(() => setLoading(false))
       .catch((e) => console.log(e));
   }, []);
-  /* console.log(data); */
+
   return (
-    <div className="mt-12 text-center flex justify-center max-w-screen-2xl lg:w-[100vw]">
-      <Form partner={partner} setPartner={setPartner} data={data} />
-      {loading ? (
-        <Loading />
-      ) : (
-        <PartnersList partner={partner} setData={setData} />
-      )}
-    </div>
+    <>
+      <div className="mt-12 text-center flex justify-center max-w-screen-2xl lg:w-[100vw]">
+        <Form partner={partner} setPartner={setPartner} data={data} />
+        {loading ? (
+          <Loading />
+        ) : (
+          <PartnersList partner={partner} setData={setData} />
+        )}
+      </div>
+      <div className="flex justify-center items-center flex-col">
+        <Link to="/contactlist">
+          <button className="bg-darkBlue text-base w-40">
+            VER LISTADO DE CONTACTOS
+          </button>
+        </Link>
+      </div>
+    </>
   );
 };
 
