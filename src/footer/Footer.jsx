@@ -28,6 +28,7 @@ export default function Footer() {
             Copyright © 2024 MGL Abogados | Created by: ME.DA.NI
           </p>
         </section>
+        <Link to="/login">ADMIN</Link>
       </div>
     </>
   );
