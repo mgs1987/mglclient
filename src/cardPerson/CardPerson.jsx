@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import linked from "../img/linkedin.png";
+import linked from "../img/LINKEDIN.svg";
 import { useTranslation } from "react-i18next";
 import GUILLERMO from "../img/Guillermo2.png";
 import PEDRO from "../img/Pedro2.png";

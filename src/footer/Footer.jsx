@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import logoB from "../img/logoAZES.svg";
 import logoA from "../img/logoAZEN.svg";
-import IN from "../img/linkedin.png";
+import IN from "../img/LINKEDIN.svg";
 import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { i18n } = useTranslation();
   return (
     <>
       <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  flex items-center justify-center max-w-screen-2xl lg:w-[100vw]">
-        <section className="lg:px-10 flex flex-col justify-center items-center lg:py-20 ">
+        <section className="lg:px-10 flex flex-col justify-center items-center ">
           <Link to="/">
             <img
               src={i18n.language === "es" ? logoB : logoA}
