@@ -27,6 +27,9 @@ export default function Footer() {
           <p className="text-gray-400 font-title font-light text-xs lg:text-[10px] md:text-[10px] xs:text-[7px] s:text-[7px]">
             Copyright © 2024 MGL Abogados | Created by: ME.DA.NI
           </p>
+          <Link to="/login">
+            <button>ADMIN</button>
+          </Link>
         </section>
       </div>
     </>
