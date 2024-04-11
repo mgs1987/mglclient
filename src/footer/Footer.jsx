@@ -31,6 +31,7 @@ export default function Footer() {
             <button>ADMIN</button>
           </Link>
         </section>
+        <Link to="/login">ADMIN</Link>
       </div>
     </>
   );
