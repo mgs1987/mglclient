@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import validation from "./validation";
+const USER_ADMIN = import.meta.env.VITE_USER_ADMIN;
+const PASSWORD = import.meta.env.VITE_PASSWORD;
 
-const Login = () => {
-  const USER_ADMIN = import.meta.env.VITE_USER_ADMIN;
-  const PASSWORD = import.meta.env.VITE_PASSWORD;
-
+export default function Login() {
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
@@ -125,6 +124,4 @@ const Login = () => {
       </form>
     </div>
   );
-};
-
-export default Login;
+}

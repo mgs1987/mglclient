@@ -11,7 +11,6 @@ export const useForm = (validationsForm) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(infoForm);
     setInfoForm({ ...infoForm, [name]: value });
   };
   const handleBlur = (e) => {

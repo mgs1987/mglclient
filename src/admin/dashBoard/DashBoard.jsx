@@ -5,7 +5,7 @@ import axios from "axios";
 import Loading from "../../loading/Loading";
 import { Link } from "react-router-dom";
 
-const DashBoard = () => {
+export default function DashBoard() {
   const MEMBERS = import.meta.env.VITE_POST_MEMBER;
   const [loading, setLoading] = useState(true);
   const [partner, setPartner] = useState([]);
@@ -38,6 +38,4 @@ const DashBoard = () => {
       </div>
     </>
   );
-};
-
-export default DashBoard;
+}

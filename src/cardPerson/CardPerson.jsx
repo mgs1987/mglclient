@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import GUILLERMO from "../img/Guillermo2.png";
 import PEDRO from "../img/Pedro2.png";
 import MARTIN from "../img/Martin2.png";
-const CardPerson = ({
+export default function CardPerson({
   name,
   rol,
   description,
@@ -12,7 +12,7 @@ const CardPerson = ({
   descriptionES,
   linkedin,
   current,
-}) => {
+}) {
   const { i18n } = useTranslation();
 
   return (
@@ -36,9 +36,9 @@ const CardPerson = ({
           <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center">
             {name}
           </h3>
-          <span className="text-2xl s:text-3xl xs:text-md flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 ">
+          <p className="text-2xl s:text-3xl xs:text-md flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 ">
             {i18n.language === "es" ? rolES : rol}
-          </span>
+          </p>
         </div>
         <div className="absolute inset-0 h-full w-full text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-sha">
           <div className="flex min-h-full flex-col justify-center bg-base rounded-lg shadow-sha">
@@ -78,6 +78,4 @@ const CardPerson = ({
       </div>
     </div>
   );
-};
-
-export default CardPerson;
+}

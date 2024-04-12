@@ -3,7 +3,7 @@ import validate from "./validate";
 import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
-const Form = ({ partner, setPartner, data }) => {
+export default function Form({ partner, setPartner, data }) {
   const CLOUDINARY_INFO = import.meta.env.VITE_CLOUDINARY_INFO;
   const POST_MEMBER = import.meta.env.VITE_POST_MEMBER;
   const EDIT_MEMBER = import.meta.env.VITE_EDIT_MEMBER;
@@ -167,7 +167,6 @@ const Form = ({ partner, setPartner, data }) => {
           });
         }
       }
-      /* setPartner([...partner, input]); */
     } catch (error) {
       console.log("Error al enviar el formulario:", error);
       console.log("Detalles del error:", error.response.data);
@@ -411,6 +410,4 @@ const Form = ({ partner, setPartner, data }) => {
       </form>
     </div>
   );
-};
-
-export default Form;
+}

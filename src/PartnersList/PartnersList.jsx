@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Partners from "../Partners/Partners";
 
 // eslint-disable-next-line react/prop-types
-const PartnersList = ({ partner, setData }) => {
+export default function PartnersList({ partner, setData }) {
   useEffect(() => {
     console.log(partner); // SI aparece en consola
   }, [partner, setData]);
@@ -35,6 +35,4 @@ const PartnersList = ({ partner, setData }) => {
       )}
     </div>
   );
-};
-
-export default PartnersList;
+}

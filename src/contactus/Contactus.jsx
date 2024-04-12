@@ -97,7 +97,6 @@ export default function Contactus() {
           placeholder={t("phone")}
           type="text"
           name="phone"
-          span
         />
         {errors.phone && (
           <>

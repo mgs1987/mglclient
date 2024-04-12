@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+const deletePartnerENV = import.meta.env.VITE_DELETE_PARTNER;
 
-const Partners = ({ per, setData, partner }) => {
-  const [prevData, setPrevData] = useState([]);
+export default function Partners({ per, setData }) {
   const {
     partner_id,
     name,
@@ -20,10 +20,7 @@ const Partners = ({ per, setData, partner }) => {
 
   const handleDelete = async (partner_id) => {
     try {
-      console.log(partner_id);
-      const resp = await axios.put(
-        `https://api-mgl.onrender.com/partner/delete/${partner_id}`
-      );
+      const resp = await axios.put(deletePartnerENV + `${partner_id}`);
       // Actualizar el estado para reflejar el cambio
       setData((prevData) =>
         prevData.map((item) => {
@@ -33,8 +30,6 @@ const Partners = ({ per, setData, partner }) => {
           return item;
         })
       );
-      /* console.log(per.active);
-      console.log(setData); */
       toast.success(resp.data.message);
     } catch (error) {
       toast.error(error.message);
@@ -108,6 +103,4 @@ const Partners = ({ per, setData, partner }) => {
       </div>
     </div>
   );
-};
-
-export default Partners;
+}
