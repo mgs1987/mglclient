@@ -65,10 +65,12 @@ export default function CardPerson({
                   name === "Pedro Malm Green"
                     ? "tight"
                     : name === "Guillermo Malm Green"
-                    ? "tight"
+                    ? "tighter"
                     : "normal"
                 }
-                md:leading-6 xs:leading-6`}
+               md:leading-6 xs:leading-6 lg:mb-6
+                
+                `}
               >
                 {i18n.language === "es" ? descriptionES : description}
               </p>

@@ -36,7 +36,7 @@ export default function Areas() {
             <h2 className="lg:my-4 font-medium lg:text-4xl md:text-3xl sm:text-3xl">
               {t("DC")}
             </h2>
-            <p className="text-justify xs:hidden s:hidden lg:leading-6 font-light sm:tracking-wider">
+            <p className="text-justify xs:hidden s:hidden lg:leading-6 ">
               {t("DCDescription")}
             </p>
           </section>
