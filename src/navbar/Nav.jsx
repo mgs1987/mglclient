@@ -14,7 +14,7 @@ export default function Nav() {
     <>
       <div className="font-title flex md:flex-row s:flex-col s:mx-5 xs:flex-col xs:mx-5 md:items-center sm:justify-start  sm:items-center md:justify-start  lg:items-center lg:justify-end  lg:gap-4 ">
         <Link
-          to="landing"
+          to="trajectory"
           smooth={true}
           duration={500}
           className="no-underline mx-3 cursor-pointer"

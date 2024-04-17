@@ -12,7 +12,7 @@ export default function Home() {
       <div id="landing">
         <Landing />
       </div>
-      <Trajectory />
+      <Trajectory id="trajectory" />
       <div id="team">
         <Team />
       </div>
