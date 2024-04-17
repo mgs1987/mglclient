@@ -7,13 +7,13 @@ export default function Footer() {
   const { i18n } = useTranslation();
   return (
     <>
-      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  flex items-center justify-center max-w-screen-2xl lg:w-[100vw]">
+      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  flex items-center justify-center max-w-screen-2xl lg:w-[100vw] sm:h-auto">
         <section className="lg:px-10 flex flex-col justify-center items-center ">
           <Link to="/">
             <img
               src={i18n.language === "es" ? logoB : logoA}
               alt="logo"
-              className="lg:p-4 md:pr-10 lg:h-11 s:h-6 s:p-4 xs:h-5 xs:p-3 md:h-8 md:mx-6 md:my-7 lg:m-1"
+              className="lg:p-4 md:pr-10 lg:h-11 s:h-6 s:p-4 xs:h-5 xs:p-3 md:h-8 md:mx-6 md:my-7 lg:m-1 sm:h-8 sm:mx-6 sm:my-7"
             />
           </Link>
           <Link to="https://www.linkedin.com/company/102793046/admin/feed/posts/?feedType=following">
@@ -27,9 +27,6 @@ export default function Footer() {
           <p className="text-gray-400 font-title font-light text-xs lg:text-[10px] md:text-[10px] xs:text-[7px] s:text-[7px]">
             Copyright © 2024 MGL Abogados | Created by: ME.DA.NI
           </p>
-          <Link to="/login">
-            <button>ADMIN</button>
-          </Link>
         </section>
       </div>
     </>

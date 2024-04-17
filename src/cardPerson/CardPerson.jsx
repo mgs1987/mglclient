@@ -21,7 +21,7 @@ export default function CardPerson({
       style={{ transform: `translateX(-${current * 109}%) ` }}
     >
       <div className="relative h-full transition-all duration-500 xs:mx-8 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[74vw] s:w-[73vw] s:mx-9 md:m-1">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[77vw] s:w-[78vw] s:mx-8 md:m-1 sm:mx-5 ">
           <img
             className="h-[345px] w-full object-cover rounded-lg cursor-pointer"
             src={
@@ -33,16 +33,16 @@ export default function CardPerson({
             }
             alt="foto"
           />
-          <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center">
+          <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center sm:text-xl ">
             {name}
           </h3>
-          <p className="text-2xl s:text-3xl xs:text-md flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 ">
+          <p className="text-2xl s:text-3xl xs:text-md sm:text-xl flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 sm:pb-10 ">
             {i18n.language === "es" ? rolES : rol}
           </p>
         </div>
         <div className="absolute inset-0 h-full w-full text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-sha">
           <div className="flex min-h-full flex-col justify-center bg-base rounded-lg shadow-sha">
-            <div className="s:px-4 static flex flex-col justify-center s:h-full s:w-76">
+            <div className="s:pr-7 s:pl-6 static flex flex-col justify-center s:h-full s:w-76">
               <section className="text-start flex flex-row justify-between xs:top-0">
                 <section>
                   <h3 className="text-darkBlue font-semibold mb-0 px-3 text-xl">
@@ -61,7 +61,7 @@ export default function CardPerson({
                 </Link>
               </section>
               <p
-                className={`text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 mt-0 s:text-lg lg:leading-snug tracking-${
+                className={`text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 sm:p-4 mt-0 s:text-lg lg:leading-snug tracking-${
                   name === "Pedro Malm Green"
                     ? "tight"
                     : name === "Guillermo Malm Green"

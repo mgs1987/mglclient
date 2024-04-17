@@ -36,10 +36,7 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { value, name } = event.target;
-
     if (Object.keys(error).length) {
-      console.log(error);
       alert("Verifica que todos los campos esten correctos");
     }
 
@@ -62,7 +59,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center max-w-screen-2xl lg:w-[100vw]">
       <form
         onSubmit={handleSubmit}
         className="flex justify-center flex-col bg-white shadow-md rounded-lg py-5 px-3 m-auto md:w-3/12  lg:w-3/12 mx-5 my-32 "

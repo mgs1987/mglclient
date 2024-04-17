@@ -1,6 +1,6 @@
 const regexOnlyLetters = /^[a-zA-Z\s]+$/;
 const regexSpaces = /^\s*$/;
-const regexOnlyNumbers = /^[0-9]+$/;
+
 const regexEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2}$/i;
 
 const validate = (input) => {
@@ -23,14 +23,6 @@ const validate = (input) => {
   } else if (regexSpaces.test(input.rol)) {
     errors.rol = "El rol no puede ser un string de espacios";
   }
-
-  /* if (!input.specialty || input.specialty === undefined) {
-    errors.specialty = "El campo no puede estar vacio";
-  } else if (input.specialty.length > 40) {
-    errors.specialty = "La descripción no puede superar 40 caracteres";
-  } else if (regexSpaces.test(input.specialty)) {
-    errors.specialty = "La especialidad no puede ser un string de espacios";
-  } */
 
   if (!input.email || input.email === undefined) {
     errors.email = "El campo no puede estar vacio";

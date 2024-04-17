@@ -1,4 +1,5 @@
 {
+    "translation":{
     "nav1":"EL ESTUDIO",
     "nav2":"NUESTRO EQUIPO",
     "nav3":"ÁREAS DE PRÁCTICA",
@@ -34,5 +35,5 @@
     "sextorenglonSmall":"y Privado.",
      "emergency":"Por urgencias contactarse al: ",
      "campoobligatorio":" *Campo obligatorio",
-     "ext":"(Exterior)"
+     "ext":"(Exterior)"} 
     }

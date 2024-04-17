@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useForm = (validationsForm) => {
+export default function useForm(validationsForm) {
   const [infoForm, setInfoForm] = useState({
     user_name: "",
     phone: "",
@@ -25,4 +25,4 @@ export const useForm = (validationsForm) => {
     handleChange,
     handleBlur,
   };
-};
+}

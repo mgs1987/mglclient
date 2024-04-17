@@ -20,16 +20,16 @@ export default function Navbar() {
         <nav className="max-w-screen-2xl lg:w-[100vw] lg:h-28 s:h-18 xs:h-19 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
           <Link to="/">
             <img
-              className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"
+              className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 sm:h-10 sm:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"
               src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
-          <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
+          <div className="flex lg:items-center xs:hidden s:hidden md:hidden sm:hidden lg:block">
             <Nav />
           </div>
           <button
             id="burguer"
-            className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7"
+            className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7 sm:mr-4 sm:p-7"
             onClick={handleButton}
           >
             <img src={burguer} alt="burguer" className="h-6 bg-darkBlue" />
@@ -39,11 +39,11 @@ export default function Navbar() {
         <nav className="lg:max-w-screen-xl  lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
           <Link to="/">
             <img
-              className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"
+              className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 sm:h-10 sm:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"
               src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
-          <div className="flex lg:items-center xs:hidden s:hidden md:hidden lg:block">
+          <div className="flex lg:items-center xs:hidden s:hidden md:hidden sm:hidden lg:block">
             <Nav />
           </div>
           <button
@@ -51,12 +51,16 @@ export default function Navbar() {
             className="lg:hidden bg-darkBlue border-none xs:mr-8 s:mr-7 md:mr-8 md:p-7"
             onClick={handleButton}
           >
-            <img src={Xicon} alt="xicon" className="h-3 p-1 bg-white" />;
+            <img
+              src={Xicon}
+              alt="xicon"
+              className="h-3 p-1 bg-white sm:mr-6 sm:p-1"
+            />
           </button>
         </nav>
       )}
       {isOpen && (
-        <section className="bg-darkBlue w-full md:flex justify-center md:h-20">
+        <section className="bg-darkBlue w-full md:flex justify-center md:h-20 sm:h-20 sm:flex ">
           <Nav />
         </section>
       )}

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useForm } from "../hook/useForm";
+import useForm from "../hook/useForm";
 import { toast } from "react-toastify";
 import axios from "axios";
 
@@ -67,7 +67,7 @@ export default function Contactus() {
     useForm(validationsForm);
   return (
     <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-16 xs:pb-14">
-      <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-center xs:mt-8 s:mt-11 md:text-5xl s:text-5xl xs:text-4xl xs:text-center ">
+      <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-center xs:mt-8 s:mt-11 md:text-5xl s:text-5xl xs:text-[41px] xs:text-center sm:text-5xl sm:text-center sm:pb-[45px] ">
         {t("contactus")}
       </h1>
       <form
@@ -136,7 +136,7 @@ export default function Contactus() {
         </p>
         <section className="flex lg:justify-center justify-center lg:w-2/3 lg:mt-10 mt-5 ">
           <button
-            className="cursor-pointer font-title lg:text-2xl bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] mb-4 py-2 px-4 md:text-2xl md:h-[50px] s:text-2xl s:h-[52px] xs:text-xl xs:h-[52px]  "
+            className="cursor-pointer font-title lg:text-2xl bg-darkBlue text-white rounded-md lg:w-64 w-40 xs:w-32 lg:py-2 lg:px-5  lg:h-[48px] h-[38px] mb-4 py-2 px-4 md:text-2xl md:h-[50px] s:text-2xl s:h-[52px] xs:text-xl xs:h-[52px] sm:text-xl sm:h-[50px] "
             type="submit"
           >
             {t("sendButton")}
