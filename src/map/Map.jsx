@@ -22,7 +22,12 @@ export default function Map() {
               alt="tel"
               className="h-4 lg:ml-1 lg:mr-2 md:h-5 md:ml-0 md:mr-1 s:mr-2 xs:mr-2 sm:h-5 sm:ml-0 sm:mr-2"
             />
-            + 54 9 (11) 6187-9552 (Argentina)
+            <a
+              className="text-white no-underline"
+              href="tel:+ 54 9 (11) 6187-9552"
+            >
+              + 54 9 (11) 6187-9552 (Argentina)
+            </a>
           </p>
           <p className="leading-3 flex items-center s:text-sm">
             <img
@@ -38,7 +43,12 @@ export default function Map() {
               alt="mail"
               className="h-3 lg:ml-1 lg:mr-2 md:h-5 md:ml-0 md:mr-1 s:mr-2 xs:mr-2  sm:h-5 sm:ml-0 sm:mr-2"
             />
-            consultas.mglabogados@gmail.com
+            <a
+              className="text-white no-underline"
+              href="mailto:consultas.mglabogados@gmail.com"
+            >
+              consultas.mglabogados@gmail.com
+            </a>
           </p>
         </section>
       </section>
