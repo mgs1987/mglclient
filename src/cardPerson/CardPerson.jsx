@@ -21,7 +21,7 @@ export default function CardPerson({
       style={{ transform: `translateX(-${current * 109}%) ` }}
     >
       <div className="relative h-full transition-all duration-500 xs:mx-8 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[77vw] s:w-[78vw] s:mx-8 md:m-1 sm:mx-5 ">
+        <div className="inset-0 shadow-sha bg-white rounded-lg xs:w-[77vw] s:w-[77vw] s:mx-8 md:m-1 sm:mx-5 ">
           <img
             className="h-[345px] w-full object-cover rounded-lg cursor-pointer"
             src={
@@ -45,25 +45,29 @@ export default function CardPerson({
             <div className="s:pr-7 s:pl-6 static flex flex-col justify-center s:h-full s:w-76">
               <section className="text-start flex flex-row justify-between xs:top-0">
                 <section>
-                  <h3 className="text-darkBlue font-semibold mb-0 px-3 text-xl">
+                  <h3 className="text-darkBlue font-semibold mb-0 s:px-3 xs:px-4 text-xl lg:px-4">
                     {name}
                   </h3>
-                  <h4 className="text-black font-light mt-0 px-3">
+                  <h4 className="text-black font-light mt-0 s:px-3 xs:px-4 lg:px-4">
                     {i18n.language === "es" ? rolES : rol}
                   </h4>
                 </section>
                 <Link to={linkedin}>
                   {linkedin ? (
-                    <img className="size-8 p-4" src={linked} alt="linkedIn" />
+                    <img
+                      className="size-8 p-4 xs:px-5"
+                      src={linked}
+                      alt="linkedIn"
+                    />
                   ) : (
                     ""
                   )}
                 </Link>
               </section>
               <p
-                className={`text-black  text-justify s:p-1 xs:p-2  lg:p-4 md:p-2 sm:p-4 mt-0 s:text-lg lg:leading-snug tracking-${
+                className={`text-darkBlue  text-justify s:p-2 xs:px-5  lg:p-4 md:p-2 sm:p-4 mt-0 s:text-lg lg:leading-snug tracking-${
                   name === "Pedro Malm Green"
-                    ? "tight"
+                    ? "normal"
                     : name === "Guillermo Malm Green"
                     ? "tighter"
                     : "normal"

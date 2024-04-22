@@ -12,7 +12,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="font-title flex md:flex-row s:flex-col s:mx-5 xs:flex-col xs:mx-5 md:items-center sm:justify-start  sm:items-center md:justify-start  lg:items-center lg:justify-end  lg:gap-4 ">
+      <div className="font-title flex md:flex-row s:flex-col s:mx-5 xs:flex-col xs:mx-5 md:items-center sm:justify-start  sm:items-center md:justify-start ">
         <Link
           to="trajectory"
           smooth={true}
