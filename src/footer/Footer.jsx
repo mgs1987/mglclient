@@ -7,7 +7,7 @@ export default function Footer() {
   const { i18n } = useTranslation();
   return (
     <>
-      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  flex items-center justify-center max-w-screen-xl lg:w-[100vw] sm:h-auto">
+      <div className="bg-base bg-cover lg:h-64 md:h-auto text-center  flex items-center justify-center lg:w-[100vw] sm:h-auto">
         <section className="lg:px-10 flex flex-col justify-center items-center ">
           <Link to="/">
             <img

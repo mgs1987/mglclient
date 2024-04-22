@@ -66,7 +66,7 @@ export default function Contactus() {
   const { infoForm, setInfoForm, errors, handleChange, handleBlur } =
     useForm(validationsForm);
   return (
-    <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-16 xs:pb-14">
+    <div className="flex flex-col justify-center items-center bg-base lg:py-20 s:pb-16 xs:pb-14 lg:w-[100vw]">
       <h1 className="font-title text-darkBlue font-semibold lg:text-5xl flex justify-center mt-16 s:text-center xs:mt-8 s:mt-11 md:text-5xl s:text-5xl xs:text-[41px] xs:text-center sm:text-5xl sm:text-center sm:pb-[45px] ">
         {t("contactus")}
       </h1>
