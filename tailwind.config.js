@@ -20,6 +20,7 @@ export default {
     screens: {
       xs: { min: "375px", max: "429px" },
       s: { min: "430px", max: "639px" },
+
       ...defaultTheme.screens,
     },
   },

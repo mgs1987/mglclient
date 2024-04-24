@@ -17,10 +17,10 @@ export default function Navbar() {
   return (
     <>
       {!isOpen ? (
-        <nav className=" lg:w-[100vw] lg:h-28 s:h-18 xs:h-19 bg-darkBlue flex lg:justify-center justify-between lg:gap-60  lg:items-center">
+        <nav className="lg:w-[100vw] lg:h-28 s:h-18 xs:h-19 bg-darkBlue flex lg:justify-center lg:flex justify-between lg:items-center">
           <Link to="/">
             <img
-              className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 sm:h-10 sm:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"
+              className="lg:p-4 lg:h-11 lg:mx-4 s:h-8 md:h-10 md:m-8 sm:h-10 sm:m-8 xs:h-8  xs:my-5 xs:mx-8 s:my-6 s:mx-9 "
               src={i18n.language === "es" ? MGLlogo : MGLlogoEN}
             />
           </Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
           </button>
         </nav>
       ) : (
-        <nav className="lg:max-w-screen-xl  lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex justify-between">
+        <nav className="lg:w-[100vw] lg:h-28 s:h-18 xs:h-18 bg-darkBlue flex justify-between">
           <Link to="/">
             <img
               className="lg:p-4 xs:h-8 lg:h-11 s:h-8 md:h-10 md:m-8 sm:h-10 sm:m-8 xs:my-5 xs:mx-8 s:my-6 s:mx-9 lg:m-1"

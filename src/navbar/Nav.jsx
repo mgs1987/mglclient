@@ -19,7 +19,7 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="text-white text-sm font-title sm:px-3">{t("nav1")}</h2>
+          <h2 className="text-white text-sm font-title sm:pl-7">{t("nav1")}</h2>
         </Link>
         <Link
           to="team"
@@ -43,13 +43,13 @@ export default function Nav() {
           duration={500}
           className="no-underline mx-3 cursor-pointer"
         >
-          <h2 className="text-sm text-white sm:px-3">{t("nav4")}</h2>
+          <h2 className="text-sm text-white sm:pl-3">{t("nav4")}</h2>
         </Link>
         <div className="xs:flex xs:justify-end xs:m-3 s:flex s:justify-end s:m-4">
           <select
             defaultValue={i18n.language}
             onChange={onChangeLang}
-            className=" text-white font-title bg-darkBlue lg:w-[3vw] md:w-[13vw] md:mx-8 s:w-[20vw] xs:w-[21vw] sm:mx-8"
+            className=" text-white font-title bg-darkBlue lg:w-[4vw] md:w-[13vw] md:mx-8 s:w-[20vw] xs:w-[21vw] sm:mx-8"
           >
             {LANGUAGES.map(({ code, label }) => {
               return (

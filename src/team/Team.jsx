@@ -16,8 +16,8 @@ export default function Team() {
   const { t } = useTranslation();
 
   return (
-    <div className="lg:w-[100vw] md:px-6 sm:px-4 flex justify-center items-center flex-col font-title bg-base lg:pt-[5rem] lg:pb-[80px] s:py-10">
-      <h1 className="mb-10 font-title text-darkBlue flex font-semibold xs:text-[45px] md:text-5xl s:text-5xl sm:text-5xl sm:text-center sm:pb-[45px] ">
+    <div className="lg:w-[100vw] flex justify-center items-center flex-col font-title bg-base lg:pt-[5rem] lg:pb-[80px] s:pt-10">
+      <h1 className="lg:mb-10 mb-12 font-title text-darkBlue flex font-semibold xs:text-[45px] md:text-5xl s:text-5xl sm:text-5xl sm:text-center sm:pb-[45px] ">
         {t("ourteam")}
       </h1>
 
@@ -42,13 +42,13 @@ export default function Team() {
       <div className="lg:hidden md:hidden sm:hidden w-full flex justify-between items-center absolute">
         <button
           onClick={previousSlide}
-          className="text-3xl border-none cursor-pointer bg-transparent s:px-1"
+          className="text-3xl border-none cursor-pointer bg-transparent px-2"
         >
           <SlArrowLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="text-3xl border-none cursor-pointer bg-transparent s:px-0 xs:mr-2"
+          className="text-3xl border-none cursor-pointer bg-transparent px-2"
         >
           <SlArrowRight />
         </button>
