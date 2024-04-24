@@ -7,8 +7,8 @@ export default function Trajectory() {
         <h1 className="font-semibold text-5xl lg:pb-[3.75rem] lg:mb-0 text-center">
           {t("ourtrajectory")}
         </h1>
-        <section className="lg:px-10 lg:tracking-wider text-center tracking-wide lg:text-lg xs:text-lg s:text-lg md:text-2xl sm:text-xl">
-          <p className="text-2xl leading-9 lg:px-0 sm:px-20">
+        <section className="lg:px-10 text-center tracking-wide lg:text-lg xs:text-lg s:text-lg md:text-2xl sm:text-xl">
+          <p className="leading-8 lg:px-0 sm:px-20 text-xl lg:tracking-wider">
             {t("ourtrajectoryText2")}
           </p>
         </section>

@@ -34,7 +34,7 @@ export default function Landing() {
           </h2>
         </div>
         <div className=" bg-darkBlue flex flex-col lg:px-40 md:px-18 md:py-32 s:px-6 s:py-20 xs:px-6 xs:py-16 ">
-          <p className="lg:mx-8 lg:px-10 text-center tracking-wider font-light lg:leading-loose s:leading-loose md:leading-relaxed whitespace-pre-line text-base md:text-2xl sm:text-xl sm:leading-10 sm:p-20 lg:p-16 s:text-lg xs:text-xl xs:leading-8 xs:p-8 s:p-10  ">
+          <p className="lg:mx-8 lg:px-10 text-center tracking-wider font-light lg:leading-loose s:leading-loose md:leading-relaxed whitespace-pre-line text-base md:text-2xl sm:text-xl sm:leading-10 sm:p-20 lg:p-16 s:text-lg xs:text-lg xs:leading-8 xs:p-8 s:p-10  ">
             <span className="font-semibold text-base text-xl s:text-md xs:text-md md:text-2xl sm:text-2xl">
               Malm Green & Lerner Abogados
             </span>

@@ -73,7 +73,7 @@ export default function CardPerson({
                     : "normal"
                 }
                md:leading-6 xs:leading-6 lg:mb-${
-                 name === "Martin Lerner" && i18n.language === "en" ? 10 : 6
+                 name === "Martin Lerner" && i18n.language === "en" ? 12 : 6
                }
                 
                 `}
