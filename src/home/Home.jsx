@@ -7,7 +7,7 @@ import Areas from "../areas/Areas";
 import Map from "../map/Map";
 export default function Home() {
   return (
-    <div className="lg:max-w-screen-xl lg:w-[100vw]">
+    <div className="">
       <Outlet />
       <div id="landing">
         <Landing />

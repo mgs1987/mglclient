@@ -6,7 +6,7 @@ export default function Landing() {
 
   return (
     <>
-      <div className="text-darkBlue font-title bg-darkBlue lg:w-[100vw]">
+      <div className="text-darkBlue font-title bg-darkBlue ">
         <section className="flex justify-center items-center relative xs:hidden s:hidden h-1/4 md:overflow-hidden sm:overflow-hidden ">
           <img src={bannerSL} className="lg:h-1/4 xs:hidden s:hidden " />
           <h2

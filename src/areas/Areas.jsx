@@ -7,7 +7,7 @@ import ButtonAreas from "./ButtonAreas";
 export default function Areas() {
   const { t } = useTranslation();
   return (
-    <div className="lg:w-[100vw] font-title text-darkBlue flex flex-col justify-center items-center xs:mr-2 bg-base lg:pt-40 md:py-20 sm:py-20 s:pt-20 s:pb-20 xs:pt-20 xs:pb-20 ">
+    <div className="lg:w-[100vw] font-title text-darkBlue flex flex-col justify-center items-center xs:mr-2 bg-base lg:pt-40 md:py-20 sm:py-20 s:pt-20 s:pb-24  xs:pb-24 ">
       <h1 className="s:text-[42px] xs:text-[41px] font-semibold lg:text-5xl md:text-5xl pb-[60px] p-0 sm:text-5xl sm:text-center sm:pb-[45px]">
         {t("practiceareas")}
       </h1>
