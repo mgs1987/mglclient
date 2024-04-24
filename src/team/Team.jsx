@@ -21,7 +21,7 @@ export default function Team() {
         {t("ourteam")}
       </h1>
 
-      <div className="xs:overflow-hidden s:overflow-hidden lg:grid lg:grid-cols-3 lg:gap-10 lg:justify-items-center md:flex-wrap md:justify-center sm:flex-wrap sm:justify-center flex s:w-full xs:w-full s:pb-1 s:pt-0 xs:pt-0 xs:pb-2">
+      <div className="xs:overflow-hidden s:overflow-hidden lg:grid lg:grid-cols-3 lg:gap-10 md:px-8 lg:justify-items-center md:flex-wrap md:justify-center sm:flex-wrap sm:justify-center flex s:w-full xs:w-full s:pb-1 s:pt-0 xs:pt-0 xs:pb-2">
         {teamMembers &&
           teamMembers.map((member) => {
             return (
