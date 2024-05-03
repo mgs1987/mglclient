@@ -42,7 +42,7 @@ export default function Login() {
 
     if (input.email === USER_ADMIN && input.password === PASSWORD) {
       setAccess(true);
-      navigate("/login/dashboard");
+      navigate("/dashboard");
     }
 
     if (!Object.keys(error).length) {

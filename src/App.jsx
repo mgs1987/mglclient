@@ -11,7 +11,6 @@ import DashBoard from "./admin/dashBoard/DashBoard";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Error from "./error/Error";
-import ContactList from "./contactList/ContactList";
 import Trajectory from "./trajectory/Trajectory";
 
 function App() {
@@ -26,8 +25,7 @@ function App() {
           <Route exact path="trajectory" element={<Trajectory />} />
           <Route exact path="areas" element={<Areas />} />
           <Route exact path="login" element={<Login />} />
-          <Route exact path="login/dashboard" element={<DashBoard />} />
-          <Route exact path="login/contactlist" element={<ContactList />} />
+          <Route exact path="dashboard" element={<DashBoard />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

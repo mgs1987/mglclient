@@ -5,7 +5,6 @@ const regexPassword =
 
 const validation = (inputs) => {
   let error = {};
-  console.log(inputs, regexEmail.test(inputs.email));
 
   if (regexEmail.test(inputs.email)) {
     error.email = "Ingrese un correo electronico valido";

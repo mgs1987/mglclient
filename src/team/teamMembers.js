@@ -36,7 +36,7 @@ var MEMBERSINFO = [
     specialtyES: "",
     rolES: "Of counsel",
     descriptionES:
-      "Guillermo Malm Green es socio del Estudio Jurídico Brons & Salas desde el año 1997. Es también miembro del Consejo Directivo del Estudio. Se graduó como Abogado con Diploma de Honor de la Universidad de Buenos Aires en 1989. Asimismo, cursó estudios sobre International Environmental Law, en la Southwestern University School of Law, Summer Law Program in Argentina, en 1993. En 1994, asistió a la Academy of American and International Law, Center for American and International Law  en la Universidad de Texas. También ha sido Allen & Overy alumni en los años 1998-1999. En 2018, realizó estudios en Harvard Law School relacionados con leadership en estudios jurídicos",
+      "Guillermo Malm Green es socio del Estudio Jurídico Brons & Salas desde el año 1997. Es también miembro del Consejo Directivo del Estudio. Se graduó como Abogado con Diploma de Honor de la Universidad de Buenos Aires en 1989. Asimismo, cursó estudios sobre International Environmental Law, en la Southwestern University School of Law, Summer Law Program in Argentina, en 1993. En 1994, asistió a la Academy of American and International Law, Center for American and International Law  en la Universidad de Texas. También ha sido Allen & Overy alumni en los años 1998-1999. En 2018, realizó estudios en Harvard Law School relacionados con leadership en estudios jurídicos.",
   },
 ];
 export default MEMBERSINFO;
