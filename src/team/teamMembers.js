@@ -31,7 +31,7 @@ var MEMBERSINFO = [
     email: "gmalmlerner@gmail.com",
     specialty: "International Law",
     description:
-      "Guillermo Malm Green has been a partner at the Law Firm Brons & Salas since 1997. He is also a member of the Firm's Board of Directors. He graduated as a Lawyer with Honors Diploma from the University of Buenos Aires in 1989. Additionally, he studied International Environmental Law at the Southwestern University School of Law, Summer Law Program in Argentina, in 1993. In 1994, he attended the Academy of American and International Law, Center for American and Int'l Law at the University of Texas. He has also been an Allen & Overy alumni in the years 1998-1999. In 2018, he undertook studies at Harvard Law School related to leadership in legal studies",
+      "Guillermo Malm Green has been a partner at the Law Firm Brons & Salas since 1997. He is also a member of the Firm's Board of Directors. He graduated as a Lawyer with Honors Diploma from the University of Buenos Aires in 1989. Additionally, he studied International Environmental Law at the Southwestern University School of Law, Summer Law Program in Argentina, in 1993. In 1994, he attended the Academy of American and International Law, Center for American and Int'l Law at the University of Texas. He has also been an Allen & Overy alumni in the years 1998-1999. In 2018, he undertook studies at Harvard Law School related to leadership in legal studies.",
     linkedin: "https://www.linkedin.com/in/guillermo-malm-green-54059a13/",
     specialtyES: "",
     rolES: "Of counsel",

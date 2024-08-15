@@ -11,7 +11,7 @@ export default function Areas() {
       <h1 className="s:text-[42px] xs:text-[41px] font-semibold lg:text-5xl md:text-5xl pb-[60px] p-0 sm:text-5xl sm:text-center sm:pb-[45px]">
         {t("practiceareas")}
       </h1>
-      <div className="lg:hidden md:hidden sm:hidden s:block xs:block">
+      <div className="lg:hidden md:hidden sm:hidden block">
         <ButtonAreas />
       </div>
       <div className="xs:hidden s:hidden lg:block md:block flex justify-center items-center flex-col max-w-screen-lg ">
