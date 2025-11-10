@@ -8,13 +8,25 @@ export default function useForm(validationsForm) {
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfoForm({ ...infoForm, [name]: value });
+    const updatedForm = { ...infoForm, [name]: value };
+    setInfoForm(updatedForm);
+
+    // Solo validar si el campo ya fue tocado (touched)
+    if (touched[name]) {
+      const allErrors = validationsForm(updatedForm);
+      setErrors(allErrors);
+    }
   };
+
   const handleBlur = (e) => {
-    handleChange(e);
+    const { name } = e.target;
+    // Marcar el campo como tocado cuando pierde el foco
+    setTouched({ ...touched, [name]: true });
+    // Validar todo el formulario
     setErrors(validationsForm(infoForm));
   };
 

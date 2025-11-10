@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import axios from "axios";
-const deletePartnerENV = import.meta.env.VITE_DELETE_PARTNER;
 
 export default function Partners({ per, setData }) {
   const {
@@ -18,10 +16,9 @@ export default function Partners({ per, setData }) {
     descriptionES,
   } = per;
 
-  const handleDelete = async (partner_id) => {
+  const handleDelete = (partner_id) => {
     try {
-      const resp = await axios.put(deletePartnerENV + `${partner_id}`);
-      // Actualizar el estado para reflejar el cambio
+      // Backend integration removed - only updating local state
       setData((prevData) =>
         prevData.map((item) => {
           if (item.partner_id === partner_id) {
@@ -30,7 +27,7 @@ export default function Partners({ per, setData }) {
           return item;
         })
       );
-      toast.success(resp.data.message);
+      toast.success("Estado actualizado localmente");
     } catch (error) {
       toast.error(error.message);
     }

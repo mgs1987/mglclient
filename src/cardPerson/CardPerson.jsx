@@ -17,7 +17,7 @@ export default function CardPerson({
 
   return (
     <div
-      className="xs:flex xs:transition xs:ease-out xs:duration-40 md:mx-3 md:mt-10 xs:justify-center  s:flex s:transition s:ease-out s:duration-40 lg:pb-20 group lg:h-96 lg:w-80 md:h-auto md:w-[42vw] s:h-auto s:w-[80vw] xs:h-auto xs:w-[82vw] s:mx-4 xs:mr-4 xs:ml-4 [perspective:1000px] pb-20 border-solid border-base text-darkBlue xs:pl-3"
+      className="xs:flex xs:transition xs:ease-out xs:duration-40 md:mx-3 md:mt-10 xs:justify-center  s:flex s:transition s:ease-out s:duration-40 lg:pb-0 group lg:h-96 lg:w-80 md:h-auto md:w-[42vw] s:h-auto s:w-[80vw] xs:h-auto xs:w-[82vw] s:mx-4 xs:mr-4 xs:ml-4 [perspective:1000px] pb-0 text-darkBlue xs:pl-3"
       style={{ transform: `translateX(-${current * 109}%) ` }}
     >
       <div className="relative h-full transition-all duration-500 xs:mx-8 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -36,7 +36,7 @@ export default function CardPerson({
           <h3 className="flex justify-center leading-none text-3xl  xs:text-center s:text-center lg:text-2xl md:text-3xl md:text-center sm:text-xl ">
             {name}
           </h3>
-          <p className="text-2xl s:text-3xl xs:text-md sm:text-xl flex justify-center leading-none lg:pb-10 md:pb-12 s:pb-14 xs:pb-14 sm:pb-10 ">
+          <p className="text-2xl s:text-3xl xs:text-md sm:text-xl flex justify-center leading-none lg:pb-2 md:pb-2 s:pb-2 xs:pb-2 sm:pb-2 ">
             {i18n.language === "es" ? rolES : rol}
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function CardPerson({
                md:leading-6 xs:leading-6 lg:mb-${
                  name === "Martin Lerner" && i18n.language === "en" ? 10 : 6
                }
-                
+
                 `}
               >
                 {i18n.language === "es" ? descriptionES : description}

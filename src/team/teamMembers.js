@@ -18,12 +18,12 @@ var MEMBERSINFO = [
     email: "martin_lerner@hotmail.com",
     specialty: "Criminal Law",
     description:
-      "Martin Lerner is a lawyer specializing in Criminal Law (University of Palermo) and a surgeon (University of Buenos Aires) specializing in Forensic Medicine. He serves as the Head of the Legal-Practice Division at the Hospital de Clínicas José de San Martín and leads the Forensic Medicine Team at the Forensic Medicine Unit of the Pilar District. Additionally, he is currently pursuing a Master's Degree in Criminal Law (University of Palermo) and has served as an official expert witness in numerous cases before the National and Federal Courts.",
+      "Martin Lerner is a lawyer specializing in Criminal Law (University of Palermo). He serves as the Head of the Legal-Practice Division at the Hospital de Clínicas José de San Martín and leads the Forensic Medicine Team at the Forensic Medicine Unit of the Pilar District. Additionally, he is currently pursuing a Master's Degree in Criminal Law (University of Palermo) and has served as an official expert witness in numerous cases before the National and Federal Courts.",
     linkedin: "",
     specialtyES: "Derecho Penal",
     rolES: "Socio",
     descriptionES:
-      "Martin Lerner es Abogado especializado en Derecho Penal (Universidad de Palermo) y Médico cirujano (Universidad de Buenos Aires) especialista en Medicina Legal. Es Jefe de División Jurídico-Pericial Hospital de Clínicas “José de San Martín” y Jefe de Equipo Médicos Legistas de las UFI Descentralizadas Distrito Pilar. Además, se encuentra cursando una Maestría en Derecho Penal (Universidad de Palermo) y ha participado como perito oficial en numerosos casos ante la Justicia Nacional en lo Civil, Criminal y Correccional, Laboral, y Comercial.",
+      "Martin Lerner es Abogado especializado en Derecho Penal (Universidad de Palermo). Es Jefe de División Jurídico-Pericial Hospital de Clínicas “José de San Martín” y Jefe de Equipo Médicos Legistas de las UFI Descentralizadas Distrito Pilar. Además, se encuentra cursando una Maestría en Derecho Penal (Universidad de Palermo) y ha participado como abogado defensor y perito oficial en numerosos casos ante la Justicia Nacional en lo Civil, Criminal y Correccional, Penal Económico, Laboral, y Comercial.",
   },
   {
     name: "Guillermo Malm Green",

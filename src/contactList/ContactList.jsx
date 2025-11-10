@@ -1,20 +1,8 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function ContactList() {
-  const CONTACTOS = import.meta.env.VITE_GET_CONTACTS;
-  const [contacts, setContacts] = useState();
-  useEffect(() => {
-    const fetchContacts = async () => {
-      try {
-        const resp = await axios.get(CONTACTOS);
-        setContacts(resp.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchContacts();
-  }, []);
+  // Backend integration removed - using local state only
+  const [contacts] = useState([]);
   return (
     <div className="font-title font-darkBlue ">
       <h1>Listado de Contactos con Solicitudes</h1>
