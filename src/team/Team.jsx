@@ -17,7 +17,7 @@ export default function Team() {
 
   return (
     <div className="lg:w-[100vw] flex justify-center items-center flex-col font-title bg-base lg:pt-[5rem] lg:pb-[80px] s:pt-10">
-      <h1 className="lg:mb-10 mb-12 font-title text-darkBlue flex font-semibold xs:text-[45px] md:text-5xl s:text-5xl sm:text-5xl sm:text-center sm:pb-[45px] ">
+      <h1 className="lg:mb-10 mb-12 font-title text-darkBlue flex font-semibold xs:text-[45px] md:text-5xl s:text-5xl sm:text-5xl xs:text-center s:text-center sm:text-center sm:pb-[45px] xs:w-full s:w-full xs:justify-center s:justify-center">
         {t("ourteam")}
       </h1>
 
@@ -43,13 +43,13 @@ export default function Team() {
         <div className="lg:hidden md:hidden sm:hidden w-full flex justify-between items-center absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2 pointer-events-none">
           <button
             onClick={previousSlide}
-            className="text-3xl border-none cursor-pointer bg-transparent px-2 pointer-events-auto"
+            className="text-3xl border-none cursor-pointer bg-transparent xs:-mx-2 s:-mx-1 pointer-events-auto"
           >
             <SlArrowLeft />
           </button>
           <button
             onClick={nextSlide}
-            className="text-3xl border-none cursor-pointer bg-transparent px-2 pointer-events-auto"
+            className="text-3xl border-none cursor-pointer bg-transparent xs:mx-5 s:mx-4 pointer-events-auto"
           >
             <SlArrowRight />
           </button>

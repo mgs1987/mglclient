@@ -19,7 +19,7 @@ export const validationsForm = (infoForm) => {
   } else if (!regexNameAndMessage.test(infoForm.message.trim())) {
     errors.message = "El campo solo acepta letras y espacios";
   }
-  if (!regexPhoneNumber.test(infoForm.phone.trim())) {
+  if (infoForm.phone.trim() && !regexPhoneNumber.test(infoForm.phone.trim())) {
     errors.phone = "El campo solo acepta numeros";
   }
   return errors;

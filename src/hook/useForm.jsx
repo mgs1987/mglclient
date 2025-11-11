@@ -15,11 +15,9 @@ export default function useForm(validationsForm) {
     const updatedForm = { ...infoForm, [name]: value };
     setInfoForm(updatedForm);
 
-    // Solo validar si el campo ya fue tocado (touched)
-    if (touched[name]) {
-      const allErrors = validationsForm(updatedForm);
-      setErrors(allErrors);
-    }
+    // Validar en tiempo real mientras el usuario escribe
+    const allErrors = validationsForm(updatedForm);
+    setErrors(allErrors);
   };
 
   const handleBlur = (e) => {
