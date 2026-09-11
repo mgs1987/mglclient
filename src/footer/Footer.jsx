@@ -25,7 +25,7 @@ export default function Footer() {
           </Link>
           <br />
           <p className="text-gray-400 font-title font-light text-xs lg:text-[10px] md:text-[10px] xs:text-[7px] s:text-[7px]">
-            Copyright © 2024 MGL Abogados | Created by: ME.DA.NI
+            Copyright © 2024 MGL Abogados | Created by: ME.DEV
           </p>
         </section>
       </div>
